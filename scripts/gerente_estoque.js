@@ -1,3 +1,5 @@
+const API_URL = 'http://10.124.75.2:8080/api/v1';
+
 const storageEstoque = window.DoceMagiaStorage;
 const categoriasEstoque = ["Açúcares", "Chocolates", "Laticínios", "Farinhas", "Outros"];
 
