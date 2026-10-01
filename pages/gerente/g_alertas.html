@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Magia — Alertas</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+    <link rel="stylesheet" href="../../css/gerente/g_alertas.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="g_estoque.html"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="g_alertas.html" class="selecionado"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_acoes">
+            <div class="cabecalho_pagina">
+                <h1>Monitorização de Alertas</h1>
+                <p>Alertas automáticos do sistema</p>
+            </div>
+            <div class="badge_alertas_ativos">
+                <i class="fa-regular fa-bell"></i> 2 alertas ativos
+            </div>
+        </div>
+
+        <div class="grupo_alertas">
+            <div class="titulo_grupo"><i class="fa-solid fa-cube"></i> Estoque Abaixo do Mínimo</div>
+            <div class="item_alerta borda-amarela">
+                <div class="alerta_info_esq">
+                    <i class="fa-solid fa-triangle-exclamation alerta_icone"></i>
+                    <div class="alerta_texto">
+                        <h4>Fermento em Pó <span style="color:#867d79; font-weight:400;">— abaixo do mínimo</span></h4>
+                        <p>Disponível: 0.3 kg · Mínimo: 0.5 kg</p>
+                    </div>
+                </div>
+                <div class="alerta_acoes">
+                    <span class="status_badge atencao">Atenção</span>
+                    <button class="btn_alerta_sec">Repor</button>
+                    <button class="btn_alerta_txt">Resolver</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo_alertas">
+            <div class="titulo_grupo"><i class="fa-regular fa-clipboard"></i> Encomendas Urgentes</div>
+            <div class="item_alerta borda-amarela">
+                <div class="alerta_info_esq">
+                    <i class="fa-solid fa-triangle-exclamation alerta_icone"></i>
+                    <div class="alerta_texto">
+                        <h4>Pedido #6A09ECEB <span style="color:#867d79; font-weight:400;">— maria</span></h4>
+                        <p>Entrega: 18/05/2026 · <strong>Vencido!</strong></p>
+                    </div>
+                </div>
+                <div class="alerta_acoes">
+                    <span class="status_badge atencao">Urgente</span>
+                    <button class="btn_alerta_txt">Resolver</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo_alertas">
+            <div class="titulo_grupo"><i class="fa-solid fa-hat-chef"></i> Produções em Andamento</div>
+            <div class="item_alerta borda-cinza">
+                <div class="alerta_info_esq">
+                    <i class="fa-solid fa-hat-chef alerta_icone cinza"></i>
+                    <div class="alerta_texto">
+                        <h4>Produção — Jão</h4>
+                        <p>Entrega: 17/05/2026 · 1h estimada</p>
+                    </div>
+                </div>
+                <div class="alerta_acoes">
+                    <span class="status_badge producao">Em Produção</span>
+                    <button class="btn_alerta_txt">Dispensar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

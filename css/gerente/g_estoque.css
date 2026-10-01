@@ -1,0 +1,357 @@
+
+.tabela_container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabela_padrao {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+}
+
+.tabela_padrao th {
+    background-color: #fdfcfc;
+    color: #867d79;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.tabela_padrao td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #f2efed;
+    color: #2a2522;
+    font-size: 0.9rem;
+}
+
+.tabela_padrao tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela_padrao tr:hover {
+    background-color: #fdfcfc;
+}
+
+.col_destaque {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icone_alerta {
+    color: #fbbc04;
+    font-size: 0.9rem;
+}
+
+.acoes_tabela i {
+    color: #867d79;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.acoes_tabela i:hover {
+    color: #865059;
+}
+
+.cabecalho_formulario_estoque {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+}
+
+.cabecalho_formulario_estoque p {
+    margin-top: 0.35rem;
+    color: #867d79;
+}
+
+.voltar_estoque {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #2a2522;
+    text-decoration: none;
+}
+
+.voltar_estoque:hover {
+    background: #fdfcfc;
+}
+
+.formulario_estoque {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 760px;
+    margin-inline: auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.campo_estoque {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.45rem;
+    min-width: 0;
+}
+
+.campo_estoque label {
+    color: #2a2522;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.campo_estoque label span {
+    color: #a33a49;
+}
+
+.campo_estoque input,
+.campo_estoque select {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #d5d2d1;
+    border-radius: 6px;
+    background: #fdfcfc;
+    color: #2a2522;
+    font: inherit;
+}
+
+.campo_estoque input:focus,
+.campo_estoque select:focus {
+    outline: 2px solid #865059;
+    outline-offset: 1px;
+}
+
+.campos_estoque_linha {
+    display: flex;
+    gap: 1rem;
+}
+
+.acoes_formulario_estoque {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+}
+
+.acoes_formulario_estoque .btn_primario {
+    border: 0;
+}
+
+.btn_cancelar_estoque {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #d5d2d1;
+    border-radius: 8px;
+    background: #fff;
+    color: #2a2522;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .campos_estoque_linha {
+        flex-direction: column;
+    }
+
+    .acoes_formulario_estoque {
+        flex-direction: column-reverse;
+    }
+
+    .acoes_formulario_estoque > * {
+        width: 100%;
+    }
+}
+
+.tabela_container {
+    overflow-x: auto;
+}
+
+.tabela_padrao {
+    min-width: 760px;
+}
+
+.tabela_padrao[hidden] {
+    display: none;
+}
+
+.quantidade_estoque {
+    font-weight: 600;
+}
+
+.acoes_tabela {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
+.acoes_tabela .acao_estoque {
+    display: inline-grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.acoes_tabela .acao_estoque i {
+    margin: 0;
+}
+
+.editar_estoque {
+    color: #2a2522;
+}
+
+.repor_estoque {
+    color: #16734b;
+}
+
+.excluir_estoque {
+    color: #a33a49;
+}
+
+.acoes_tabela .acao_estoque:hover {
+    background: #fdfcfc;
+    border-color: #bdb8b6;
+}
+
+.estoque_vazio {
+    padding: 1.5rem !important;
+    color: #867d79 !important;
+    text-align: center;
+}
+
+.estado_estoque,
+.mensagem_estoque {
+    margin: 0 0 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+}
+
+.mensagem_estoque {
+    display: none;
+}
+
+.mensagem_estoque.sucesso,
+.mensagem_estoque.erro,
+.estado_estoque:not([hidden]) {
+    display: block;
+}
+
+.mensagem_estoque.sucesso {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.mensagem_estoque.erro,
+.estado_estoque {
+    background: #fbdfe2;
+    color: #a33a49;
+}
+
+.modal_estoque {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgb(0 0 0 / 50%);
+}
+
+.modal_estoque.aberto {
+    display: flex;
+}
+
+.modal_estoque_conteudo {
+    width: min(100%, 760px);
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 10px 40px rgb(0 0 0 / 25%);
+}
+
+.modal_reposicao_conteudo {
+    max-width: 480px;
+}
+
+.modal_reposicao_conteudo > p {
+    margin: 0 0 1rem;
+    color: #867d79;
+}
+
+.modal_estoque_cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.modal_estoque_cabecalho h2 {
+    margin: 0;
+    color: #2a2522;
+    font-size: 1.25rem;
+}
+
+.fechar_modal_estoque {
+    border: 0;
+    padding: 0;
+    background: none;
+    color: #867d79;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal_estoque .acoes_formulario_estoque button {
+    min-height: 2.6rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.modal_estoque .acoes_formulario_estoque .btn_cancelar_estoque {
+    background: white;
+}
+
+.modal_estoque .acoes_formulario_estoque .btn_primario {
+    border: 0;
+    color: white;
+}
+
+@media (max-width: 640px) {
+    .modal_estoque_conteudo {
+        padding: 1rem;
+    }
+}

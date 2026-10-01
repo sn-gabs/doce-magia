@@ -1,0 +1,166 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DoceMagia</title>
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/cliente/c_carrinho.css">
+        <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+        <script src="../../scripts/cliente/c_carrinho.js" defer></script>
+    </head>
+
+    <div class="modal" id="modalDados">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" id="fecharModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Dados da Encomenda</h2>
+            <p>Preencha as informações para finalizar seu pedido.</p>
+            <form>
+                <div class="campo">
+                    <label>Nome completo</label>
+                    <input type="text" placeholder="Digite seu nome">
+                </div>
+                <div class="campo">
+                    <label>CPF</label>
+                    <input type="text" placeholder="000.000.000-00">
+                </div>
+                <div class="campo">
+                    <label>Telefone</label>
+                    <input type="tel" placeholder="(11) 99999-9999">
+                </div>
+                <div class="campo">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="email@exemplo.com">
+                </div>
+                <div class="campo">
+                    <label>Endereço</label>
+                    <input type="text" placeholder="Rua, número, bairro...">
+                </div>
+                <button type="submit" class="btn-finalizar">
+                    Finalizar Pedido
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <body>
+        <header class="header">
+
+            <div class="logo">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div class="logo-texto">
+                    <h1>Doce Magia</h1>
+                    <p>Doces artesanais feitos com carinho</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <a href="c_dashboard.html">
+                    <i class="fa-solid fa-store"></i>
+                    Vitrine
+                </a>
+                <a href="#" class="ativo">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Carrinho
+                </a>
+                <a href="c_encomendas.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    Meus Pedidos
+                </a>
+                <a href="../../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Sair
+                </a>
+            </nav>
+
+        </header>
+
+        <main class="carrinho">
+
+            <section class="cabecalho-carrinho">
+                <h2>Sua Encomenda</h2>
+                <p>2 itens no carrinho</p>
+            </section>
+
+            <section class="lista-produtos">
+                <article class="item-carrinho">
+                    <div class="produto">
+                        <img src="../../images/bolo_chocolate.jpg" alt="Bolo de Chocolate">
+                        <div class="informacoes">
+                            <h3>Bolo de Chocolate</h3>
+                            <p>R$ 85,00 cada</p>
+                            <span>Subtotal: R$ 85,00</span>
+                        </div>
+                    </div>
+
+                    <div class="acoes">
+                        <div class="quantidade">
+                            <button>
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <span>1</span>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="remover">
+                            <i class="fa-regular fa-trash-can"></i>
+                            Remover
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="item-carrinho">
+                    <div class="produto">
+                        <img src="../../images/bolo_red_velvet.jpg" alt="Bolo Red Velvet">
+                        <div class="informacoes">
+                            <h3>Bolo Red Velvet</h3>
+                            <p>R$ 95,00 cada</p>
+                            <span>Subtotal: R$ 95,00</span>
+                        </div>
+                    </div>
+
+                    <div class="acoes">
+                        <div class="quantidade">
+                            <button>
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <span>1</span>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="remover">
+                            <i class="fa-regular fa-trash-can"></i>
+                            Remover
+                        </button>
+                    </div>
+                </article>
+            </section>
+
+            <section class="resumo">
+                <div class="total">
+                    <div>
+                        <p>Total parcial</p>
+                    </div>
+                    <h2>R$ 180,00</h2>
+                </div>
+
+                <div class="botoes">
+                    <button class="continuar-comprando">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <a href="./c_dashboard.html">Adicionar mais produtos</a>
+                    </button>
+                    <button class="prosseguir" id="abrirModal">
+                        Continuar para dados
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </body>
+    </html>

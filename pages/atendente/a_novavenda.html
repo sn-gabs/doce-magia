@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Venda</title>
+    <link rel="stylesheet" href="../.././css/main.css">
+    <link rel="stylesheet" href="../../css/atendente/a_novavenda.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+    <script src="../../scripts/atendente-utils.js"></script>
+    <script src="../../scripts/a_novavenda.js" defer></script>
+</head>
+<body>
+
+    <nav class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+    </nav>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li>
+                <a href="./a_dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="./a_novavenda.html" class="selecionado">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    Nova Venda
+                </a>
+            </li>
+            <li>
+                <a href="./a_novaencomenda.html">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    Nova Encomenda
+                </a>
+            </li>
+            <li>
+                <a href="./a_consultarencomendas.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Consultar Encomendas
+                </a>
+            </li>
+            <li>
+                <a href="./a_clientes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Clientes
+                </a>
+            </li>
+            <li>
+                <a href="./a_produtos.html">
+                    <i class="fa-solid fa-box-open"></i>
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="./a_caixa.html">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    Caixa
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="nova_venda">
+
+        <section class="cabecalho_pagina">
+            <div>
+                <h2>Nova Venda</h2>
+                <p>Registrar venda no balcão</p>
+            </div>
+        </section>
+    
+        <section class="conteudo_venda">
+            <section class="catalogo">
+                <div class="barra_pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar produto...">
+                </div>
+
+                <div class="produtos">
+                    <div class="produto">
+                        <h3>Bolo de Chocolate</h3>
+                        <p class="categoria">Bolos</p>
+                        <p class="preco">R$ 85,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Bolo Red Velvet</h3>
+                        <p class="categoria">Bolos</p>
+                        <p class="preco">R$ 95,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Brigadeiro Gourmet</h3>
+                        <p class="categoria">Brigadeiros</p>
+                        <p class="preco">R$ 5,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Bolo de Cenoura</h3>
+                        <p class="categoria">Bolos</p>
+                        <p class="preco">R$ 75,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Torta de Limão</h3>
+                        <p class="categoria">Tortas</p>
+                        <p class="preco">R$ 70,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Cookie de Chocolate</h3>
+                        <p class="categoria">Cookies</p>
+                        <p class="preco">R$ 8,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Cupcake de Baunilha</h3>
+                        <p class="categoria">Cupcakes</p>
+                        <p class="preco">R$ 12,00</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Pão de Mel</h3>
+                        <p class="categoria">Doces</p>
+                        <p class="preco">R$ 7,50</p>
+                    </div>
+                    <div class="produto">
+                        <h3>Sonho Recheado</h3>
+                        <p class="categoria">Padaria</p>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="carrinho">
+                <div class="cabecalho_carrinho">
+                    <h2>Carrinho</h2>
+                    <button>
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <div class="itens_carrinho">
+                    <p>Nenhum item adicionado.</p>
+                </div>
+                <div class="resumo">
+                    <div class="linha">
+                        <p>Subtotal</p>
+                        <p id="subtotal">R$ 0,00</p>
+                    </div>
+                    <div class="linha">
+                        <p>Desconto</p>
+                        <p>R$ 0,00</p>
+                    </div>
+                    <div class="linha total">
+                        <h3>Total</h3>
+                        <h3 id="total">R$ 0,00</h3>
+                    </div>
+                    <button class="btn_finalizar">
+                        Finalizar Venda
+                    </button>
+                </div>
+            </section>
+
+        </section>
+    
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 Doce Magia</p>
+        <p>Sistema da Doceria</p>
+        <p>Site criado para fins pedagógicos</p>
+    </footer>
+
+    <div id="popup" class="popup">
+    <div class="popup-conteudo">
+        <img src="../../images/florkcute.jpg" alt="^^" class="img-popup">
+        <h2>Venda Finalizada!</h2>
+        <p>A venda foi registrada com sucesso.</p>
+        <button id="fecharPopup">
+            Fechar
+        </button>
+    </div>
+    </div>
+
+</body>
+</html>

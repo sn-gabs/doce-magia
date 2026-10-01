@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Magia — Gestão de Produtos</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+    <link rel="stylesheet" href="../../css/gerente/g_produtos.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="g_estoque.html"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="g_produtos.html" class="selecionado"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_acoes">
+            <div class="cabecalho_pagina">
+                <h1>Gestão de Produtos</h1>
+                <p>Consulte e administre os produtos da Doce Magia.</p>
+            </div>
+            <a class="btn_primario" href="g_produtos_formulario.html">
+                <i class="fa-solid fa-plus"></i> Novo Produto
+            </a>
+        </div>
+
+        <div class="barra_filtros">
+            <input type="search" class="input_pesquisa" placeholder="Pesquisar produto..." aria-label="Pesquisar produto">
+            <select class="select_filtro" aria-label="Filtrar por categoria">
+                <option value="">Todas as categorias</option>
+            </select>
+        </div>
+
+        <div id="mensagem" class="mensagem" aria-live="polite"></div>
+        <p id="loadingProdutos" class="lista_vazia" aria-live="polite">Carregando produtos...</p>
+
+        <div class="tabela_produtos">
+            <table id="tabelaProdutos" hidden>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Tempo</th>
+                        <th>Categoria</th>
+                        <th>Destaque</th>
+                        <th>Disponível</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaProdutos" aria-live="polite"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="modalEdicao" class="modal" aria-hidden="true">
+        <section class="modal_conteudo" role="dialog" aria-modal="true" aria-labelledby="tituloEdicao">
+            <div class="modal_cabecalho">
+                <h2 id="tituloEdicao">Editar Produto</h2>
+                <button type="button" class="btn_fechar" data-fechar-modal aria-label="Fechar">&times;</button>
+            </div>
+
+            <form id="formEdicao">
+                <input type="hidden" id="editId">
+                <div class="form_grupo">
+                    <label for="editNome">Nome *</label>
+                    <input type="text" id="editNome" maxlength="200" required>
+                </div>
+                <div class="form_grupo">
+                    <label for="editDescricao">Descrição</label>
+                    <textarea id="editDescricao" maxlength="1000" rows="3"></textarea>
+                </div>
+                <div class="form_linha">
+                    <div class="form_grupo">
+                        <label for="editPreco">Preço (R$) *</label>
+                        <input type="number" id="editPreco" step="0.01" min="0.01" required>
+                    </div>
+                    <div class="form_grupo">
+                        <label for="editPrecoPromocional">Preço promocional (R$)</label>
+                        <input type="number" id="editPrecoPromocional" step="0.01" min="0">
+                    </div>
+                </div>
+                <div class="form_linha">
+                    <div class="form_grupo">
+                        <label for="editTempoPreparo">Tempo de preparo (horas) *</label>
+                        <input type="number" id="editTempoPreparo" min="1" required>
+                    </div>
+                    <div class="form_grupo">
+                        <label for="editCategoriaId">Categoria *</label>
+                        <select id="editCategoriaId" required>
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_grupo">
+                    <label for="editIngredientes">Ingredientes</label>
+                    <textarea id="editIngredientes" maxlength="1000" rows="2"></textarea>
+                </div>
+                <div class="form_linha">
+                    <div class="form_grupo">
+                        <label for="editPeso">Peso</label>
+                        <input type="text" id="editPeso" maxlength="50">
+                    </div>
+                    <div class="form_grupo">
+                        <label for="editImagem">Imagem</label>
+                        <input type="text" id="editImagem" maxlength="255">
+                    </div>
+                </div>
+                <div class="opcoes_produto">
+                    <label><input type="checkbox" id="editDestaque"> Destaque</label>
+                    <label><input type="checkbox" id="editDisponivel"> Disponível</label>
+                </div>
+                <div class="modal_botoes">
+                    <button type="button" class="btn_cancelar" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="btn_salvar" id="btnSalvarEdicao">Salvar alterações</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../../scripts/gerente_produtos.js"></script>
+</body>
+</html>

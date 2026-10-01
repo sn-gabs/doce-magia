@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Produto - Doce Magia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <span>Gerente</span>
+        </div>
+
+          <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="./g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="./g_estoque.html"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="./g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="./g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="./g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo" style="max-width: 700px; margin: 40px auto; padding: 20px;">
+        <div class="cabecalho_pagina" style="margin-bottom: 20px;">
+            <h1>Cadastrar Novo Produto</h1>
+        </div>
+
+        <form id="formProduto" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <label for="nome">Nome do Produto:</label><br>
+                <input type="text" id="nome" name="nome" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+
+            <div>
+                <label for="categoriaId">Categoria:</label><br>
+                <select id="categoriaId" name="categoriaId" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                    <option value="">Carregando categorias...</option>
+                </select>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label for="preco">Preço (R$):</label><br>
+                    <input type="number" step="0.01" min="0.01" id="preco" name="preco" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+                <div style="flex: 1;">
+                    <label for="tempoPreparo">Tempo de Produção (horas):</label><br>
+                    <input type="number" min="1" id="tempoPreparo" name="tempoPreparo" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+            </div>
+
+            <div>
+                <label for="descricao">Descrição:</label><br>
+                <textarea id="descricao" name="descricao" rows="3" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
+            </div>
+
+            <div>
+                <label for="ingredientes">Ingredientes:</label><br>
+                <textarea id="ingredientes" name="ingredientes" rows="2" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label for="peso">Peso:</label><br>
+                    <input type="text" id="peso" name="peso" placeholder="Ex.: 500g" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+                <div style="flex: 1;">
+                    <label for="imagem">Imagem URL:</label><br>
+                    <input type="text" id="imagem" name="imagem" placeholder="Opcional" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="destaque" name="destaque">
+                    Destaque
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="disponivel" name="disponivel" checked>
+                    Disponível
+                </label>
+            </div>
+
+            <div id="mensagem" class="mensagem" aria-live="polite"></div>
+
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <button type="submit" id="btnEnviar" class="btn_primario" style="flex: 1; padding: 10px; cursor: pointer;">Salvar Produto</button>
+                <button type="button" onclick="window.location.href='g_produtos.html'" style="flex: 1; padding: 10px; cursor: pointer; border: 1px solid #ddd; border-radius: 8px; background: white; color: #2a2522;">Cancelar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="../../scripts/gerente_produtos.js"></script>
+</body>
+</html>

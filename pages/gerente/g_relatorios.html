@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Magia — Relatórios</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+    <link rel="stylesheet" href="../../css/gerente/g_relatorios.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="g_estoque.html"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="g_relatorios.html" class="selecionado"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_pagina" style="margin-bottom: 2rem;">
+            <h1>Relatórios de Gestão</h1>
+            <p>Acompanhe as vendas e o desempenho do negócio</p>
+        </div>
+
+        <div class="seletor_periodo">
+            <select class="select_filtro">
+                <option>Hoje</option>
+                <option>Esta Semana</option>
+                <option>Este Mês</option>
+            </select>
+        </div>
+
+        <div class="grid_relatorios_kpi">
+            <div class="card_kpi">
+                <div class="card_kpi_topo"><i class="fa-solid fa-dollar-sign"></i> Faturação</div>
+                <div class="card_kpi_valor">R$ 0.00</div>
+            </div>
+            <div class="card_kpi">
+                <div class="card_kpi_topo"><i class="fa-solid fa-cart-shopping"></i> Vendas Efetuadas</div>
+                <div class="card_kpi_valor">0</div>
+            </div>
+            <div class="card_kpi">
+                <div class="card_kpi_topo"><i class="fa-solid fa-arrow-trend-up"></i> Ticket Médio</div>
+                <div class="card_kpi_valor">R$ 0.00</div>
+            </div>
+            <div class="card_kpi">
+                <div class="card_kpi_topo"><i class="fa-regular fa-star"></i> Produto Top</div>
+                <div class="card_kpi_valor" style="color: #2a2522">—</div>
+            </div>
+        </div>
+
+        <div class="grid_graficos">
+            <div class="placeholder_grafico">
+                <h3 class="titulo_grafico">Vendas por Dia</h3>
+                <span class="centro_grafico">Sem dados no período</span>
+            </div>
+            <div class="placeholder_grafico">
+                <h3 class="titulo_grafico">Por Método de Pagamento</h3>
+                <span class="centro_grafico">Sem dados no período</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

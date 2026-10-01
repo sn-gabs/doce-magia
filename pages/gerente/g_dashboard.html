@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Magia — Dashboard Administrativo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_dashboard.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="" class="selecionado"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="./g_estoque.html"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="./g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="./g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="./g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_dashboard">
+            <div class="cabecalho_pagina">
+                <h1>Dashboard Administrativo</h1>
+                <p>Visão geral gerencial da Doce Magia</p>
+            </div>
+            <a class="acao_cadastro_atendente" href="./g_atendente_cadastro.html">
+                <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                Cadastrar atendente
+            </a>
+        </div>
+
+        <section class="grid_estatisticas">
+            <div class="card_estatistica card_estatistica--alerta">
+                <div class="card_estatistica_topo">
+                    <div class="icone_estat icone_estat--alerta">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <span class="badge_atencao">Atenção</span>
+                </div>
+                <h2 class="valor_estat">1</h2>
+                <p>Estoque em Alerta</p>
+            </div>
+
+            <div class="card_estatistica">
+                <div class="card_estatistica_topo">
+                    <div class="icone_estat icone_estat--neutro">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+                <h2 class="valor_estat">1</h2>
+                <p>Produções em Andamento</p>
+            </div>
+
+            <div class="card_estatistica">
+                <div class="card_estatistica_topo">
+                    <div class="icone_estat icone_estat--neutro">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                </div>
+                <h2 class="valor_estat">R$ 0.00</h2>
+                <p>Vendas do Dia</p>
+            </div>
+
+            <div class="card_estatistica">
+                <div class="card_estatistica_topo">
+                    <div class="icone_estat icone_estat--neutro">
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <h2 class="valor_estat valor_estat--menor">Brigadeiro Tradicional</h2>
+                <p>Produto Mais Vendido</p>
+            </div>
+        </section>
+
+        <section class="secao_modulos">
+            <span class="rotulo_secao">Módulos Administrativos</span>
+            <div class="grid_modulos">
+                <a href="./g_estoque.html" class="card_modulo">
+                    <div class="icone icone--azul">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3>Gerenciar Estoque</h3>
+                    <p>Visualize e atualize ingredientes</p>
+                </a>
+                <a href="./g_produtos.html" class="card_modulo">
+                    <div class="icone icone--rosa">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3>Gerenciar Produtos</h3>
+                    <p>Cadastre e edite os produtos</p>
+                </a>
+                <a href="./g_relatorios.html" class="card_modulo">
+                    <div class="icone icone--amarelo">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <h3>Relatórios</h3>
+                    <p>Faturamento e vendas por período</p>
+                </a>
+                <a href="./g_alertas.html" class="card_modulo">
+                    <div class="icone icone--vermelho">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>Monitoramento de Alertas</h3>
+                    <p>Alertas e pendências do sistema</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

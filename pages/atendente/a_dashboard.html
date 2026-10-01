@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Atendente</title>
+    <link rel="stylesheet" href="../../css/atendente/a_dashboard.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+        <nav class="barra_navegacao">
+            <div class="titulo_principal">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h1>DOCE MAGIA</h1>
+            </div>
+            <div class="sair">
+                <a href="../../index.html">Sair</a>
+            </div>
+        </nav>
+
+    </header>
+    <main id="main_atendente">
+        
+        
+        <section id="resumoDashboard" class="resumo-dashboard"></section>
+
+        <section id="funcionalidades_atendente">
+
+            <div class="titulo_h2">
+                <h2>Painel do Atendente</h2>
+                <p>O que deseja fazer?</p>
+            </div>
+            
+            <div class="botao">
+                <a href="a_novavenda.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                    <h3>Nova Venda</h3>
+                    <p>Registrar vendas realizadas diretamente no balcão.</p>
+                </a>
+            </div>
+
+            <div class="botao">
+                <a href="a_novaencomenda.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3>Nova Encomenda</h3>
+                    <p>Cadastrar novas encomendas para festas, eventos e ocasiões especiais.</p>
+                </a>
+            </div>
+
+            <div class="botao">
+                <a href="a_consultarencomendas.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Consultar Encomendas</h3>
+                    <p>Pesquisar, acompanhar e atualizar o status das encomendas.</p>
+                </a>
+            </div>
+            
+            <div class="botao">
+                <a href="a_clientes.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>Clientes</h3>
+                    <p>Consultar, cadastrar e atualizar informações dos clientes.</p>
+                </a>
+            </div>
+            
+            <div class="botao">
+                <a href="a_produtos.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3>Produtos</h3>
+                    <p>Visualizar produtos disponíveis e consultar o estoque atual.</p>
+                </a>
+            </div>
+
+            <div class="botao">
+                <a href="a_caixa.html">
+                    <div class="icone">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <h3>Caixa</h3>
+                    <p>Acompanhar movimentações financeiras e registrar operações de caixa.</p>
+                </a>
+            </div>
+            
+        </section>
+        
+        <section id="outros_modulos">
+
+            <div class="titulo_h2">
+                <h2>Outros módulos</h2>
+                <p>Acesse outros módulos</p>
+            </div>
+
+            <div class="botao">
+                <a href="">
+                    <div class="icone">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+                    <h3>Produtor</h3>
+                    <p>Acessar o painel de produção e acompanhar pedidos em preparo.</p>
+                </a>
+            </div>
+
+            <div class="botao">
+                <a href="">
+                    <div class="icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Gerente</h3>
+                    <p>Visualizar relatórios, indicadores e funções administrativas.</p>
+                </a>
+            </div>
+
+            <div class="botao">
+                <a href="">
+                    <div class="icone">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Cliente</h3>
+                    <p>Acessar a área do cliente e consultar pedidos realizados.</p>
+                </a>
+            </div>
+        
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>© 2026 Doce Magia</p>
+        <p>Sistema da Doceria</p>
+        <p>Site criado para fins pedagógicos</p>
+    </footer>
+    <script src="../../scripts/atendente-utils.js"></script>
+    <script src="../../scripts/a_dashboard.js"></script>
+</body>
+</html>

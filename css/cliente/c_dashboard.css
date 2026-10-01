@@ -1,0 +1,283 @@
+.header{
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 55px;
+
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i{
+    font-size: 34px;
+    color: #874d66;
+}
+
+.logo-texto h1{
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo-texto p{
+    font-size: 13px;
+    color: #888;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    color: #444;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: .25s;
+}
+
+.menu a:hover{
+    background: #f5f2f1;
+    color: #874d66;
+}
+
+.menu a.ativo{
+    background: #874d66;
+    color: white !important;
+    font-weight: 600;
+}
+
+.menu a.ativo i{
+    color: white;
+}
+
+.hero{
+    width: 100%;
+    text-align: center;
+
+    padding: 60px 20px 30px;
+}
+
+.hero h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    color: gray;
+    margin-bottom: 35px;
+}
+
+.pesquisa input{
+    width: 500px;
+    height: 45px;
+    border-radius: 25px;
+    border: 1px solid #d9d9d9;
+    padding: 0 20px;
+}
+.categorias{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.categorias button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    transition: .3s;
+}
+
+.categorias button:hover{
+    background: #874d66;
+    color: white;
+}
+
+.ativo{
+    background: #874d66 !important;
+    color: white;
+}
+.produtos{
+    width: 80%;
+    margin: auto;
+}
+
+.produtos h2{
+    margin-bottom: 30px;
+}
+
+.grid-produtos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+
+}
+
+.card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+
+}
+
+.badge{
+    width: fit-content;
+    background: #d6a146;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 13px;
+}
+
+.conteudo-card{
+    padding: 20px;
+}
+
+.categoria{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+
+}
+
+.conteudo-card h3{
+    margin-bottom: 10px;
+
+}
+
+.conteudo-card p{
+    color: #666;
+    margin-bottom: 20px;
+
+}
+.rodape-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.rodape-card h3{
+    color: #4d2b1e;
+
+}
+
+.rodape-card button{
+    background: #874d66;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: .3s;
+
+}
+
+.rodape-card button:hover{
+    background: #6c3d51;
+
+}
+@media(max-width: 700px){
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+@media(max-width:700px){
+    .logo i{
+        font-size: 38px;
+    }
+
+    .logo-texto h1{
+        font-size: 22px;
+    }
+
+    .logo-texto p{
+        font-size: 12px;
+    }
+}
+@media(max-width:700px){
+
+    .hero h2{
+        font-size: 32px;
+    }
+
+    .hero p{
+        font-size: 14px;
+    }
+
+}
+@media(max-width:700px){
+
+    .categorias{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .categorias button{
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+}
+@media(max-width:1000px){
+    .grid-produtos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:700px){
+    .grid-produtos{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+@media(max-width:700px){
+    .produtos{
+        width: 95%;
+    }
+}

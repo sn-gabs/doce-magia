@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/atendente/a_produtos.css">
+
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="barra_navegacao">
+
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+
+    </nav>
+
+    <nav class="submenu_atendente">
+
+        <ul>
+
+            <li>
+
+                <a href="a_dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a class="selecionado" href="a_produtos.html">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    Produtos
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="cabecalho">
+
+        <h2>Produtos</h2>
+
+        <p>
+
+            Consulte todos os produtos disponíveis da Doceria Doce Magia.
+
+        </p>
+
+    </section>
+
+    <section class="pesquisa">
+
+        <input
+            type="text"
+            id="campoPesquisa"
+            placeholder="Pesquisar produto...">
+
+    </section>
+
+    <section class="grid-produtos" id="listaProdutos">
+
+        <!-- Produto 1 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-cake-candles"></i>
+
+            </div>
+
+            <h3>Bolo de Chocolate</h3>
+
+            <p class="categoria">
+
+                Bolos
+
+            </p>
+
+            <p class="preco">
+
+                R$ 85,00
+
+            </p>
+
+            <span class="status disponivel">
+
+                Em estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+        <!-- Produto 2 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-cookie"></i>
+
+            </div>
+
+            <h3>Cookie Tradicional</h3>
+
+            <p class="categoria">
+
+                Cookies
+
+            </p>
+
+            <p class="preco">
+
+                R$ 8,00
+
+            </p>
+
+            <span class="status disponivel">
+
+                Em estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+        <!-- Produto 3 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-ice-cream"></i>
+
+            </div>
+
+            <h3>Cupcake Baunilha</h3>
+
+            <p class="categoria">
+
+                Cupcakes
+
+            </p>
+
+            <p class="preco">
+
+                R$ 12,00
+
+            </p>
+
+            <span class="status disponivel">
+
+                Em estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+        <!-- Produto 4 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-candy-cane"></i>
+
+            </div>
+
+            <h3>Brigadeiro Gourmet</h3>
+
+            <p class="categoria">
+
+                Doces
+
+            </p>
+
+            <p class="preco">
+
+                R$ 4,50
+
+            </p>
+
+            <span class="status disponivel">
+
+                Em estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+        <!-- Produto 5 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-bread-slice"></i>
+
+            </div>
+
+            <h3>Torta de Limão</h3>
+
+            <p class="categoria">
+
+                Tortas
+
+            </p>
+
+            <p class="preco">
+
+                R$ 65,00
+
+            </p>
+
+            <span class="status indisponivel">
+
+                Sem estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+        <!-- Produto 6 -->
+
+        <div class="produto-card">
+
+            <div class="icone-produto">
+
+                <i class="fa-solid fa-cheese"></i>
+
+            </div>
+
+            <h3>Cheesecake de Morango</h3>
+
+            <p class="categoria">
+
+                Tortas
+
+            </p>
+
+            <p class="preco">
+
+                R$ 95,00
+
+            </p>
+
+            <span class="status disponivel">
+
+                Em estoque
+
+            </span>
+
+            <button class="visualizar">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Visualizar
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="rodape">
+
+    <p>© 2026 Doce Magia</p>
+    <p>Sistema da Doceria</p>
+    <p>Site criado para fins pedagógicos</p>
+
+</footer>
+
+<script src="../../scripts/atendente-utils.js"></script>
+<script src="../../scripts/a_produtos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Encomendas</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/atendente/a_consultarencomendas.css">
+
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+
+    <nav class="barra_navegacao">
+
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+
+    </nav>
+
+    <nav class="submenu_atendente">
+
+        <ul>
+
+            <li>
+                <a href="a_dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="a_novavenda.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Nova Venda
+                </a>
+            </li>
+
+            <li>
+                <a class="selecionado" href="a_consultarencomendas.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Consultar Encomendas
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="cabecalho">
+
+        <h2>Consultar Encomendas</h2>
+
+        <p>
+            Pesquise encomendas utilizando o nome do cliente ou o número do pedido.
+        </p>
+
+    </section>
+
+    <section class="pesquisa">
+
+        <input
+            type="text"
+            id="campoPesquisa"
+            placeholder="Pesquisar cliente ou nº do pedido...">
+
+        <select id="filtroStatus">
+            <option value="todos">Todos os status</option>
+            <option value="Pending">Pendente</option>
+            <option value="InProgress">Em Produção</option>
+            <option value="Delivered">Entregue</option>
+        </select>
+
+        <button id="btnPesquisar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Pesquisar
+
+        </button>
+
+    </section>
+
+    <section class="tabela">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Pedido</th>
+
+                    <th>Cliente</th>
+
+                    <th>Data</th>
+
+                    <th>Total</th>
+
+                    <th>Status</th>
+
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaPedidos">
+
+                <tr>
+
+                    <td>#1001</td>
+
+                    <td>Maria Oliveira</td>
+
+                    <td>12/06/2026</td>
+
+                    <td>R$ 185,00</td>
+
+                    <td>
+                        <span class="status producao">
+                            Em Produção
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="visualizar">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1002</td>
+
+                    <td>João Silva</td>
+
+                    <td>14/06/2026</td>
+
+                    <td>R$ 320,00</td>
+
+                    <td>
+
+                        <span class="status pendente">
+
+                            Pendente
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="visualizar">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1003</td>
+
+                    <td>Ana Souza</td>
+
+                    <td>18/06/2026</td>
+
+                    <td>R$ 96,00</td>
+
+                    <td>
+
+                        <span class="status entregue">
+
+                            Entregue
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="visualizar">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1004</td>
+
+                    <td>Carlos Mendes</td>
+
+                    <td>21/06/2026</td>
+
+                    <td>R$ 450,00</td>
+
+                    <td>
+
+                        <span class="status producao">
+
+                            Em Produção
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="visualizar">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1005</td>
+
+                    <td>Fernanda Costa</td>
+
+                    <td>23/06/2026</td>
+
+                    <td>R$ 120,00</td>
+
+                    <td>
+
+                        <span class="status entregue">
+
+                            Entregue
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="visualizar">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<footer class="rodape">
+
+    <p>© 2026 Doce Magia</p>
+
+    <p>Sistema da Doceria</p>
+
+    <p>Site criado para fins pedagógicos</p>
+
+</footer>
+
+<script src="../../scripts/atendente-utils.js"></script>
+<script src="../../scripts/a_consultarencomendas.js"></script>
+
+</body>
+</html>

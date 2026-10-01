@@ -1,0 +1,433 @@
+/* ==========================================================================
+   ESTRUTURA BASE E LAYOUT DA PÁGINA
+   ========================================================================== */
+
+:root {
+    --rosa-claro: #fff6f8;
+    --rosa-suave: #f9e8ee;
+    --rosa: #f2a7bf;
+    --rosa-escuro: #d86e96;
+    --bege: #f8e5d3;
+    --marrom: #4b2c2c;
+    --marrom-escuro: #2d1b1b;
+    --texto: #5e3d40;
+    --cinza: #f8f5f3;
+    --branco: #ffffff;
+    --sombra: rgba(88, 52, 59, 0.1);
+    --linha: rgba(122, 87, 92, 0.14);
+    --sucesso: #2e7d32;
+    --alerta: #c62828;
+    --amarelo: #f4d08b;
+    --roxo: #b283d9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #fffaf8 0%, #f9e7ee 100%);
+    color: var(--texto);
+}
+
+i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+}
+
+#main_atendente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.topo-pagina {
+    width: min(1100px, 90%);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+/* Botão Voltar Lateral */
+.btn-voltar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--marrom);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-voltar:hover {
+    transform: translateX(-3px);
+}
+
+.btn-voltar i {
+    font-size: 1.5rem;
+    color: var(--rosa-escuro);
+}
+
+/* Bloco do Cabeçalho Branco */
+.cabecalho-bloco {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--linha);
+    border-radius: 22px;
+    box-shadow: 0 10px 22px var(--sombra);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+.titulo-centralizado h1 {
+    margin: 0;
+    color: var(--marrom);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+}
+
+.titulo-centralizado p {
+    margin-top: 0.5rem;
+    color: #775a5d;
+    font-size: 0.95rem;
+}
+
+/* Abas de Navegação Estruturadas em Grid */
+.abas-navegacao {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.abas-navegacao a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    color: #7a5d60;
+    font-size: 0.9rem;
+    padding: 0.8rem 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.abas-navegacao a:hover {
+    color: var(--rosa-escuro);
+    border-color: rgba(216, 110, 150, 0.5);
+    box-shadow: 0 8px 18px rgba(216, 110, 150, 0.08);
+}
+
+.abas-navegacao a.aba-ativa {
+    background: linear-gradient(135deg, #fff4f8 0%, #fbe7ef 100%);
+    color: var(--rosa-escuro);
+    border-color: rgba(216, 110, 150, 0.35);
+    box-shadow: 0 8px 16px rgba(216, 110, 150, 0.1);
+}
+
+/* Área de Conteúdo abaixo do menu */
+.conteudo-bloco {
+    width: min(1100px, 90%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+/* Filtros e Inputs de Busca */
+.barra-filtros {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.campo-busca {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    padding: 0 1rem;
+    box-shadow: 0 8px 18px rgba(75, 44, 44, 0.03);
+}
+
+.campo-busca i {
+    color: #867d79;
+    margin-right: 0.8rem;
+}
+
+.campo-busca input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.9rem 0;
+    font-size: 0.95rem;
+    color: var(--texto);
+    background: transparent;
+}
+
+.campo-busca:focus-within {
+    border-color: rgba(216, 110, 150, 0.5);
+    box-shadow: 0 0 0 4px rgba(242, 167, 191, 0.12);
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO EXCLUSIVA DOS CARDS DE PEDIDOS (STYLING WIREFRAME)
+   ========================================================================== */
+
+.lista-pedidos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-pedido {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--linha);
+    border-radius: 20px;
+    box-shadow: 0 10px 22px var(--sombra);
+    overflow: hidden;
+}
+
+/* Topo do Card */
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(122, 87, 92, 0.12);
+}
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.icone-seta {
+    color: #867d79;
+    font-size: 1.1rem;
+}
+
+.info-cliente .codigo-pedido {
+    font-size: 0.8rem;
+    color: #a09894;
+    display: block;
+    margin-bottom: 0.1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.info-cliente h2 {
+    font-size: 1.5rem;
+    color: var(--marrom);
+    margin: 0;
+    font-weight: 800;
+}
+
+.info-cliente .data-entrega {
+    font-size: 0.9rem;
+    color: #867d79;
+    margin: 0.35rem 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.header-direita {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Badges de Tags laterais */
+.badge {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.badge-urgente {
+    background: linear-gradient(135deg, #fff5f4 0%, #fde2df 100%);
+    color: var(--alerta);
+    border: 1px solid rgba(198, 40, 40, 0.15);
+}
+
+.badge-pendente {
+    background: linear-gradient(135deg, #fff4f8 0%, #fbe7ef 100%);
+    color: var(--rosa-escuro);
+    border: 1px solid rgba(216, 110, 150, 0.2);
+}
+
+/* Corpo Interno do Card */
+.pedido-detalhes {
+    padding: 1.5rem;
+    background: rgba(249, 245, 243, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pedido-detalhes h3 {
+    font-size: 1rem;
+    color: var(--marrom);
+    margin: 0 0 0.6rem 0;
+    font-weight: 700;
+}
+
+/* Caixas de Texto com fundo Branco */
+.caixa-info {
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    color: var(--marrom);
+}
+
+.produto-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qtd-produto {
+    font-size: 0.85rem;
+    color: #867d79;
+}
+
+.texto-mutado {
+    color: #867d79;
+}
+
+/* Grids Internos */
+.pedido-grid-duplo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.pedido-grid-final {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: end;
+}
+
+/* Listagem de Ingredientes com Linhas Pontilhadas */
+.caixa-ingredientes {
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.lista-ingredientes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.lista-ingredientes li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    color: var(--marrom);
+}
+
+.pontilhado {
+    flex: 1;
+    border-bottom: 2px dotted rgba(122, 87, 92, 0.25);
+    margin: 0 0.5rem;
+    position: relative;
+    top: -4px;
+}
+
+/* Botão de Ação Inferior */
+.secao-acao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-iniciar-producao {
+    width: 100%;
+    background: linear-gradient(135deg, var(--rosa) 0%, var(--rosa-escuro) 100%);
+    color: var(--branco);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 18px rgba(216, 110, 150, 0.2);
+}
+
+.btn-iniciar-producao:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 20px rgba(216, 110, 150, 0.28);
+}
+
+@media (max-width: 760px) {
+    .topo-pagina {
+        flex-direction: column;
+    }
+
+    .painel-detalhes-producao {
+        grid-template-columns: 1fr;
+    }
+
+    .abas-navegacao {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pedido-grid-duplo,
+    .pedido-grid-final {
+        grid-template-columns: 1fr;
+    }
+
+    .pedido-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .header-direita {
+        width: 100%;
+    }
+
+    .btn-voltar {
+        align-self: flex-start;
+    }
+}

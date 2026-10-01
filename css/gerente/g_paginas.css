@@ -1,0 +1,88 @@
+
+.conteudo {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 2.5rem;
+}
+
+.cabecalho_acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.btn_primario {
+    background-color: #865059;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn_primario:hover {
+    background-color: #6b3e4a;
+}
+
+.barra_filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input_pesquisa {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfcfc;
+    font-family: "Inter", sans-serif;
+}
+
+.select_filtro {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfcfc;
+    font-family: "Inter", sans-serif;
+    color: #2a2522;
+    min-width: 150px;
+}
+
+.status_badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+.status_badge.normal {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.status_badge.atencao {
+    background-color: #fef08a;
+    color: #ca8a04;
+}
+
+.status_badge.urgente {
+    background-color: #fbdfe2;
+    color: #c0394a;
+}
+
+.status_badge.producao {
+    background-color: #fef08a;
+    color: #ca8a04;
+}
+
+a{
+    color:white;
+}

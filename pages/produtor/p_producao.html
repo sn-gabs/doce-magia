@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/produtor/produtor.css">
+    <link rel="stylesheet" href="../../css/produtor/producao.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous" defer></script>
+    <title>Controle de Produção - Doce Magia</title>
+</head>
+<body>
+
+    <div class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+    </div>
+
+    <div id="main_atendente">
+
+        <div class="topo-pagina">
+            <a href="p_dashboard.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                <div>voltar</div>
+            </a>
+
+            <div class="cabecalho-bloco">
+                <div class="titulo-centralizado">
+                    <h1>Controle de Produção</h1>
+                    <p>Acompanhe e atualize o status das produções</p>
+                </div>
+                
+                <div class="abas-navegacao">
+                    <a href="p_dashboard.html">Dashboard</a>
+                    <a href="p_pedidos.html">Pedidos pendentes</a>
+                    <a href="p_producao.html" class="aba-ativa">Controle de Produção</a>
+                    <a href="p_estoque.html">Controle de estoque</a>
+                    <a href="p_ingredientes.html">Consulta de ingredientes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo-bloco">
+            
+            <div class="barra-filtros-producao">
+                <button class="botao-filtro-status ativo">Em produção</button>
+                <button class="botao-filtro-status">Aguardando ingredientes</button>
+                <button class="botao-filtro-status">Pronto</button>
+            </div>
+
+            <div class="cartao-producao-container">
+                
+                <div class="cabecalho-pedido">
+                    <div class="info-cliente">
+                        <div class="id-pedido">#00000</div>
+                        <h2>Cliente 1</h2>
+                        <div class="data-entrega">Entrega: dd/mm/aa às 12h00</div>
+                    </div>
+                    <div class="badge-status">Em produção</div>
+                </div>
+
+                <div class="bloco-item">
+                    <h3>Item em produção</h3>
+                    <div class="linha-produto-detalhe">
+                        <div>Produto 1</div>
+                        <div class="quantidade-destaque">1 Unidade</div>
+                    </div>
+                </div>
+
+                <div class="painel-detalhes-producao">
+                    
+                    <div class="coluna-dados-ingredientes">
+                        <h3>Ingredientes | Status</h3>
+                        <div class="tabela-ingredientes-falsa">
+                            <div class="linha-ingrediente">
+                                <div>Ingrediente 1</div>
+                                <div>1kg</div>
+                                <div class="status-ok">✔</div>
+                            </div>
+                            <div class="linha-ingrediente">
+                                <div>Ingrediente 2</div>
+                                <div>5un</div>
+                                <div class="status-ok">✔</div>
+                            </div>
+                            <div class="linha-ingrediente">
+                                <div>Ingrediente 3</div>
+                                <div>2L</div>
+                                <div class="status-ok">✔</div>
+                            </div>
+                            <div class="linha-ingrediente">
+                                <div>Ingrediente 4</div>
+                                <div>½ kg</div>
+                                <div class="status-alerta">⚠</div>
+                            </div>
+                            <div class="linha-ingrediente">
+                                <div>Ingrediente 5</div>
+                                <div>200ml</div>
+                                <div class="status-ok">✔</div>
+                            </div>
+                        </div>
+
+                        <h3 class="titulo-separador-obs">Observações</h3>
+                        <div class="caixa-observacoes-cliente">
+                            Observações descrita pelo cliente
+                        </div>
+                    </div>
+
+                    <div class="coluna-acoes-status">
+                        <button class="btn-principal-producao">Iniciar produção</button>
+                        
+                        <div class="caixa-notificacao-bloqueio">
+                            <p>A produção do pedido #00000 foi bloqueada temporariamente devido à falta de "Ingrediente 1".</p>
+                            <p>O gerente responsável foi notificado para realizar a reposição do estoque.</p>
+                            <p>Enquanto isso, o pedido será direcionado para a seção "Aguardando Ingredientes".</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

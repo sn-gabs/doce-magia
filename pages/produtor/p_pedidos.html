@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/produtor/produtor.css">
+    <link rel="stylesheet" href="../../css/produtor/pedidos.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous" defer></script>
+    <title>Pedidos Pendentes - Doce Magia</title>
+</head>
+<body>
+
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h1>Doce Magia</h1>
+        </div>
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+    </header>
+
+    <main id="main_atendente">
+        
+        <div class="topo-pagina">
+            <a href="p_dashboard.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>voltar</span>
+            </a>
+            
+            <div class="cabecalho-bloco">
+                <div class="titulo-centralizado">
+                    <h1>Pedidos pendentes</h1>
+                    <p>Encomendas aguardando início da produção</p>
+                </div>
+                <nav class="abas-navegacao">
+                    <a href="p_dashboard.html">Dashboard</a>
+                    <a href="p_pedidos.html" class="aba-ativa">Pedidos pendentes</a>
+                    <a href="p_producao.html">Controle de Produção</a>
+                    <a href="p_estoque.html">Controle de estoque</a>
+                    <a href="p_ingredientes.html">Consulta de ingredientes</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="conteudo-bloco">
+            
+            <div class="barra-filtros">
+                <div class="campo-busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar por cliente ou n° do pedido...">
+                </div>
+            </div>
+
+            <div class="lista-pedidos">
+                
+                <div class="card-pedido">
+                    
+                    <div class="pedido-header">
+                        <div class="header-esquerda">
+                            <i class="fa-solid fa-chevron-down icone-seta"></i>
+                            <div class="info-cliente">
+                                <span class="codigo-pedido">#00000</span>
+                                <h2>Cliente 1</h2>
+                                <p class="data-entrega">
+                                    <i class="fa-regular fa-calendar-days"></i> Entrega: dd/mm/aa às 12h00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="header-direita">
+                            <span class="badge badge-urgente">Urgente</span>
+                            <span class="badge badge-pendente">Pendente</span>
+                        </div>
+                    </div>
+
+                    <div class="pedido-detalhes">
+                        
+                        <div class="secao-pedido-larga">
+                            <h3>Produtos solicitados</h3>
+                            <div class="caixa-info produto-linha">
+                                <span>Produto 1</span>
+                                <span class="qtd-produto">1 Unidade</span>
+                            </div>
+                        </div>
+
+                        <div class="pedido-grid-duplo">
+                            <div class="secao-pedido">
+                                <h3>Tempo estimado</h3>
+                                <div class="caixa-info">1 hora total</div>
+                            </div>
+                            <div class="secao-pedido">
+                                <h3>Observações</h3>
+                                <div class="caixa-info texto-mutado">Observações descritas pelo cliente</div>
+                            </div>
+                        </div>
+
+                        <div class="pedido-grid-final">
+                            <div class="secao-pedido">
+                                <h3>Ingredientes</h3>
+                                <div class="caixa-ingredientes">
+                                    <ul class="lista-ingredientes">
+                                        <li><span>Ingrediente 1</span><span class="pontilhado"></span><span>1kg</span></li>
+                                        <li><span>Ingrediente 2</span><span class="pontilhado"></span><span>5un</span></li>
+                                        <li><span>Ingrediente 3</span><span class="pontilhado"></span><span>2L</span></li>
+                                        <li><span>Ingrediente 4</span><span class="pontilhado"></span><span>½ kg</span></li>
+                                        <li><span>Ingrediente 5</span><span class="pontilhado"></span><span>200ml</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="secao-acao">
+                                <button class="btn-iniciar-producao">Iniciar Produção</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> </div>
+        </div>
+    </main>
+
+</body>
+</html>

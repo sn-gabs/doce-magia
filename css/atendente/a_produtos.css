@@ -1,0 +1,251 @@
+.container{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.cabecalho{
+    margin-bottom: 2rem;
+}
+
+.cabecalho h2{
+    color:#2a2522;
+    margin-bottom:.5rem;
+}
+
+.cabecalho p{
+    color:#867d79;
+}
+
+/* ===========================
+        Pesquisa
+=========================== */
+
+.pesquisa{
+    margin-bottom:2rem;
+}
+
+.pesquisa input{
+    width:100%;
+    padding:.9rem 1rem;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-family:"Inter", sans-serif;
+    font-size:.95rem;
+}
+
+.pesquisa input:focus{
+    border-color:#865059;
+}
+
+/* ===========================
+        Grid Produtos
+=========================== */
+
+.grid-produtos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+    gap:1.5rem;
+
+}
+
+/* ===========================
+        Card Produto
+=========================== */
+
+.produto-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:1.5rem;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.produto-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.icone-produto{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#865059;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:1rem;
+
+}
+
+.icone-produto i{
+
+    color:white;
+
+    font-size:1.8rem;
+
+}
+
+.produto-card h3{
+
+    margin-bottom:.4rem;
+
+    color:#2a2522;
+
+}
+
+.categoria{
+
+    color:#867d79;
+
+    margin-bottom:1rem;
+
+}
+
+.preco{
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    color:#865059;
+
+    margin-bottom:1rem;
+
+}
+
+/* ===========================
+          Status
+=========================== */
+
+.status{
+
+    padding:.45rem 1rem;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:1.3rem;
+
+}
+
+.disponivel{
+
+    background:#dff5e2;
+
+    color:#1f7a35;
+
+}
+
+.indisponivel{
+
+    background:#fde3e3;
+
+    color:#b3261e;
+
+}
+
+/* ===========================
+        Botão
+=========================== */
+
+.visualizar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    background:#865059;
+
+    color:white;
+
+    padding:.9rem;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-family:"Inter", sans-serif;
+
+}
+
+.visualizar:hover{
+
+    background:#73444b;
+
+}
+
+.visualizar i{
+
+    color:white;
+
+}
+
+/* ===========================
+        Responsividade
+=========================== */
+
+@media(max-width:900px){
+
+    .grid-produtos{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .grid-produtos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

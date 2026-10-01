@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoceMagia</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/cliente/c_encomendas.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script></head>
+<body>
+     <header class="header">
+
+        <div class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            <div class="logo-texto">
+                <h1>Doce Magia</h1>
+                <p>Doces artesanais feitos com carinho</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <a href="c_dashboard.html">
+                <i class="fa-solid fa-store"></i>
+                Vitrine
+            </a>
+
+            <a href="c_carrinho.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Carrinho
+            </a>
+
+            <a href="c_encomendas.html" class="ativo">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Meus Pedidos
+            </a>
+
+            <a href="../../index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main class="pedidos">
+        <section class="titulo-pagina">
+            <div class="icone-titulo">
+                <i class="fa-solid fa-box"></i>
+            </div>
+            <div>
+                <h2>Meus Pedidos</h2>
+                <p>Acompanhe suas encomendas</p>
+            </div>
+        </section>
+
+        <section class="pesquisa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+                type="search"
+                placeholder="Buscar por número do pedido...">
+        </section>
+
+        <section class="lista-pedidos">
+            <article class="pedido">
+                <div class="pedido-topo">
+                    <div>
+                        <h3>Pedido #DM224124</h3>
+                        <p>
+                            <i class="fa-regular fa-calendar"></i>
+                            18/05/2026 às 14:07
+                        </p>
+                    </div>
+                    <span class="status pendente">
+                        <i class="fa-regular fa-clock"></i>
+                        Pendente
+                    </span>
+                </div>
+                <div class="pedido-produtos">
+                    <p>Bolo de Chocolate × 1</p>
+                    <span>R$ 80,00</span>
+                </div>
+                <div class="pedido-rodape">
+                    <div class="informacoes">
+                        <span>Pagamento: Pix</span>
+                        <span>Entrega: 20/05/2026</span>
+                    </div>
+                    <h4>R$ 80,00</h4>
+                </div>
+            </article>
+
+            <article class="pedido">
+                <div class="pedido-topo">
+                    <div>
+                        <h3>Pedido #DM162596</h3>
+                        <p>
+                            <i class="fa-regular fa-calendar"></i>
+                            18/05/2026 às 00:46
+                        </p>
+                    </div>
+                    <span class="status pendente">
+                        <i class="fa-regular fa-clock"></i>
+                        Pendente
+                    </span>
+                </div>
+                <div class="pedido-produtos">
+                    <p>Bolo de Chocolate × 1</p>
+                    <span>R$ 80,00</span>
+                </div>
+                <div class="pedido-rodape">
+                    <div class="informacoes">
+                        <span>Pagamento: Cartão</span>
+                        <span>Entrega: 19/05/2026</span>
+                    </div>
+                    <h4>R$ 80,00</h4>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

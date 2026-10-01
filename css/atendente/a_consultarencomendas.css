@@ -1,0 +1,175 @@
+.container{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.cabecalho{
+    margin-bottom: 2rem;
+}
+
+.cabecalho h2{
+    color: #2a2522;
+    margin-bottom: .5rem;
+}
+
+.cabecalho p{
+    color: #867d79;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pesquisa input{
+    flex: 1;
+    padding: .9rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-size: .95rem;
+}
+
+.pesquisa input:focus{
+    border: 1px solid #865059;
+}
+
+.pesquisa button{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background-color: #865059;
+    color: white;
+    padding: .9rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-family: "Inter", sans-serif;
+}
+
+.pesquisa button:hover{
+    background-color: #73444b;
+}
+
+.pesquisa button i{
+    color: white;
+}
+
+.tabela{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color:#865059;
+}
+
+thead th{
+    color:white;
+    padding:1rem;
+    text-align:left;
+    font-weight:500;
+}
+
+tbody td{
+    padding:1rem;
+    border-bottom:1px solid #eee;
+    font-family:"Inter", sans-serif;
+    color:#555;
+}
+
+tbody tr:hover{
+    background:#faf7f7;
+}
+
+.status{
+    padding:.45rem .9rem;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+    display:inline-block;
+}
+
+.entregue{
+    background:#dff5e2;
+    color:#1d7a34;
+}
+
+.producao{
+    background:#fff4d6;
+    color:#9a6b00;
+}
+
+.pendente{
+    background:#fde3e3;
+    color:#b3261e;
+}
+
+.visualizar{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    background:#865059;
+    color:white;
+    padding:.6rem 1rem;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    font-family:"Inter", sans-serif;
+}
+
+.visualizar:hover{
+    background:#73444b;
+}
+
+.visualizar i{
+    color:white;
+}
+
+@media(max-width:900px){
+
+    .pesquisa{
+        flex-direction:column;
+    }
+
+    .pesquisa button{
+        width:100%;
+        justify-content:center;
+    }
+
+    .tabela{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:750px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:95%;
+    }
+
+    .cabecalho h2{
+        font-size:1.6rem;
+    }
+
+    .pesquisa input{
+        font-size:.9rem;
+    }
+
+}

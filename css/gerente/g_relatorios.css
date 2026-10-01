@@ -1,0 +1,69 @@
+
+.seletor_periodo {
+    margin-bottom: 1.5rem;
+}
+
+.grid_relatorios_kpi {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card_kpi {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card_kpi_topo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: #867d79;
+    margin-bottom: 0.8rem;
+}
+
+.card_kpi_valor {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #865059;
+}
+
+.grid_graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.placeholder_grafico {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.titulo_grafico {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    color: #867d79;
+    text-transform: uppercase;
+    margin-bottom: auto;
+    letter-spacing: 0.05em;
+}
+
+.centro_grafico {
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: #b5aba6;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Encomenda</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/atendente/a_novaencomenda.css">
+
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="barra_navegacao">
+
+<div class="titulo_principal">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+<h1>DOCE MAGIA</h1>
+</div>
+
+<div class="sair">
+<a href="../../index.html">Sair</a>
+</div>
+
+</nav>
+
+<nav class="submenu_atendente">
+
+<ul>
+
+<li>
+<a href="a_dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a class="selecionado" href="a_novaencomenda.html">
+<i class="fa-solid fa-clipboard-list"></i>
+Nova Encomenda
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main class="container">
+
+<section class="cabecalho">
+
+<h2>Nova Encomenda</h2>
+
+<p>Cadastre uma nova encomenda.</p>
+
+</section>
+
+<form id="formEncomenda">
+
+<div class="grupo">
+
+<label>Cliente</label>
+
+<select id="cliente" required>
+
+<option value="">Selecione um cliente</option>
+
+</select>
+
+</div>
+
+<div class="duas-colunas">
+
+<div class="grupo">
+
+<label>Telefone</label>
+
+<input
+type="text"
+id="telefone"
+placeholder="(11) 99999-9999">
+
+</div>
+
+<div class="grupo">
+
+<label>Data de Retirada</label>
+
+<input
+type="date"
+id="retirada">
+
+</div>
+
+</div>
+
+<div class="grupo">
+
+<label>Produto</label>
+
+<select id="produto">
+
+<option value="85">
+Bolo de Chocolate - R$85,00
+</option>
+
+<option value="95">
+Cheesecake - R$95,00
+</option>
+
+<option value="65">
+Torta de Limão - R$65,00
+</option>
+
+<option value="12">
+Cupcake - R$12,00
+</option>
+
+<option value="8">
+Cookie - R$8,00
+</option>
+
+<option value="4.5">
+Brigadeiro Gourmet - R$4,50
+</option>
+
+</select>
+
+</div>
+
+<div class="duas-colunas">
+
+<div class="grupo">
+
+<label>Quantidade</label>
+
+<input
+type="number"
+id="quantidade"
+value="1"
+min="1">
+
+</div>
+
+<div class="grupo">
+
+<label>Forma de Pagamento</label>
+
+<select id="pagamento">
+
+<option>Pix</option>
+
+<option>Cartão de Crédito</option>
+
+<option>Cartão de Débito</option>
+
+<option>Dinheiro</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="grupo">
+
+<label>Observações</label>
+
+<textarea
+id="observacoes"
+rows="5"
+placeholder="Ex.: Sem lactose, decoração azul..."></textarea>
+
+</div>
+
+<section class="resumo">
+
+<h3>Resumo da Encomenda</h3>
+
+<p>
+
+Produto:
+<span id="produtoResumo">
+
+Bolo de Chocolate
+
+</span>
+
+</p>
+
+<p>
+
+Quantidade:
+<span id="quantidadeResumo">
+
+1
+
+</span>
+
+</p>
+
+<p>
+
+Valor Total:
+
+<strong id="valorTotal">
+
+R$ 85,00
+
+</strong>
+
+</p>
+
+</section>
+
+<button type="submit" class="salvar">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Salvar Encomenda
+
+</button>
+
+</form>
+
+</main>
+
+<footer class="rodape">
+
+<p>© 2026 Doce Magia</p>
+<p>Sistema da Doceria</p>
+<p>Site criado para fins pedagógicos</p>
+
+</footer>
+
+<script src="../../scripts/atendente-utils.js"></script>
+<script src="../../scripts/a_novaencomenda.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+
+.badge_alertas_ativos {
+    background: #fbdfe2;
+    color: #c0394a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #f3b8bf;
+}
+
+.grupo_alertas {
+    margin-bottom: 2rem;
+}
+
+.titulo_grupo {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #867d79;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.item_alerta {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.item_alerta.borda-amarela {
+    border-left: 4px solid #fbbc04;
+}
+
+.item_alerta.borda-cinza {
+    border-left: 4px solid #ddd;
+}
+
+.alerta_info_esq {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.alerta_icone {
+    color: #fbbc04;
+    font-size: 1.2rem;
+}
+
+.alerta_icone.cinza {
+    color: #867d79;
+}
+
+.alerta_texto h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2a2522;
+    margin-bottom: 0.3rem;
+}
+
+.alerta_texto p {
+    font-size: 0.85rem;
+    color: #867d79;
+}
+
+.alerta_texto strong {
+    color: #c0394a;
+    font-weight: 600;
+}
+
+.alerta_acoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn_alerta_sec {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: #2a2522;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn_alerta_sec:hover {
+    border-color: #867d79;
+}
+
+.btn_alerta_txt {
+    background: none;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: #867d79;
+    cursor: pointer;
+}
+
+.btn_alerta_txt:hover {
+    color: #2a2522;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/produtor/produtor.css">
+    <link rel="stylesheet" href="../../css/produtor/dashboard.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous" defer></script>
+    <script src="../../scripts/produtor/p_dashboard.js" defer></script>
+    <title>Painel do Produtor - Doce Magia</title>
+</head>
+<body>
+
+    <div class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+    </div>
+
+    <div id="main_atendente">
+        
+        <div class="bloco-topo-layout">
+            <div class="usuario-caixa-layout">
+                <div class="user-info-topo">
+                    <strong>Produtor</strong>
+                    <p>Produtor 1</p>
+                </div>
+                <div class="user-sair-link">
+                    <a href="../../index.html">Sair</a>
+                </div>
+            </div>
+            
+            <div class="logo-titulo-central">
+                <h1>DoceMagia</h1>
+            </div>
+        </div>
+
+        <div class="barra-subtitulo-faixa">
+            <h2>Painel do Produtor</h2>
+        </div>
+
+        <div class="resumo-dashboard">
+            <div class="card-pequeno">
+                <h3>Pedidos pendentes</h3>
+                <p class="numero-status" id="qtdPedidos">0</p>
+            </div>
+            <div class="card-pequeno">
+                <h3>Produções em andamento</h3>
+                <p class="numero-status" id="qtdProducoes">0</p>
+            </div>
+            <div class="card-pequeno card-pequeno-alerta">
+                <h3 class="texto-alerta">Ingredientes em alerta</h3>
+                <p class="numero-status texto-alerta" id="qtdAlertas">0</p>
+            </div>
+        </div>
+
+        <div class="menu-botoes-alinhados">
+            <a href="p_pedidos.html" class="botao-horizontal">Pedidos pendentes</a>
+            <a href="p_producao.html" class="botao-horizontal">Controle de Produção</a>
+            <a href="p_estoque.html" class="botao-horizontal">Controle de Estoque</a>
+            <a href="p_ingredientes.html" class="botao-horizontal">Consulta de Ingredientes</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

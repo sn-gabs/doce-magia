@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Ingrediente - Doce Magia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+    <link rel="stylesheet" href="../../css/gerente/g_estoque.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente" aria-label="Navegação do módulo gerente">
+        <ul>
+            <li><a href="g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="g_estoque.html" class="selecionado"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_pagina cabecalho_formulario_estoque">
+            <a class="voltar_estoque" href="g_estoque.html" aria-label="Voltar para o estoque" title="Voltar para o estoque">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <div>
+                <h1>Cadastrar ingrediente</h1>
+                <p>Adicione um item ao controle de estoque</p>
+            </div>
+        </div>
+
+        <form class="formulario_estoque" id="formularioEstoque">
+            <div class="campo_estoque">
+                <label for="nome">Ingrediente <span aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Ex.: Açúcar" required maxlength="100">
+            </div>
+
+            <div class="campo_estoque">
+                <label for="categoria">Categoria <span aria-hidden="true">*</span></label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Açúcares">Açúcares</option>
+                    <option value="Chocolates">Chocolates</option>
+                    <option value="Laticínios">Laticínios</option>
+                    <option value="Farinhas">Farinhas</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="campos_estoque_linha">
+                <div class="campo_estoque">
+                    <label for="quantidade">Quantidade disponível <span aria-hidden="true">*</span></label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="0" min="0" step="0.01" required>
+                </div>
+                <div class="campo_estoque">
+                    <label for="unidade">Unidade <span aria-hidden="true">*</span></label>
+                    <select id="unidade" name="unidade" required>
+                        <option value="kg">Quilogramas (kg)</option>
+                        <option value="g">Gramas (g)</option>
+                        <option value="l">Litros (L)</option>
+                        <option value="ml">Mililitros (ml)</option>
+                        <option value="un">Unidades (un)</option>
+                    </select>
+                </div>
+                <div class="campo_estoque">
+                    <label for="minimo">Estoque mínimo <span aria-hidden="true">*</span></label>
+                    <input type="number" id="minimo" name="minimo" placeholder="0" min="0" step="0.01" required>
+                </div>
+            </div>
+
+            <div class="acoes_formulario_estoque">
+                <a class="btn_cancelar_estoque" href="g_estoque.html">Cancelar</a>
+                <button class="btn_primario" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar ingrediente
+                </button>
+            </div>
+            <div id="mensagemEstoque" class="mensagem_estoque" aria-live="polite"></div>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+    <script src="../../scripts/atendente-utils.js"></script>
+    <script src="../../scripts/gerente_estoque.js"></script>
+</body>
+</html>

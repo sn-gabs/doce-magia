@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/produtor/produtor.css">
+    <link rel="stylesheet" href="../../css/produtor/estoque.css">
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous" defer></script>
+    <title>Controle de Estoque - Doce Magia</title>
+</head>
+<body>
+
+    <div class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+    </div>
+
+    <div id="main_atendente">
+        
+        <div class="topo-pagina">
+            <a href="p_dashboard.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                <div>voltar</div>
+            </a>
+            
+            <div class="cabecalho-bloco">
+                <div class="titulo-centralizado">
+                    <h1>Controle de estoque</h1>
+                    <p>Verificação do estoque de ingredientes</p>
+                </div> 
+                <div class="abas-navegacao">
+                    <a href="p_dashboard.html">Dashboard</a>
+                    <a href="p_pedidos.html">Pedidos pendentes</a>
+                    <a href="p_producao.html">Controle de Produção</a>
+                    <a href="p_estoque.html" class="aba-ativa">Controle de estoque</a>
+                    <a href="p_ingredientes.html">Consulta de ingredientes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo-bloco">
+            <div class="barra-filtros">
+                <div class="campo-busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar ingrediente...">
+                </div>
+                <input type="text" class="filtro-simples" placeholder="Todas as categorias">
+                <input type="text" class="filtro-simples" placeholder="Status">
+            </div>
+
+            <div class="lista-estoque">
+                <div class="item-estoque cabecalho-lista">
+                    <div>Ingredientes</div>
+                    <div>Categoria</div>
+                    <div>Disponível</div>
+                    <div>Mínimo</div>
+                    <div>Status</div>
+                </div>
+                <div class="item-estoque">
+                    <div>Ingrediente 1</div>
+                    <div>Categoria 1</div>
+                    <div>20Kg</div>
+                    <div>3kg</div>
+                    <div class="status-normal">Normal</div>
+                </div>
+                <div class="item-estoque">
+                    <div>Ingrediente 2</div>
+                    <div>Categoria 2</div>
+                    <div>1,5Kg</div>
+                    <div>2Kg</div>
+                    <div class="status-alerta">Alerta</div>
+                </div>
+                <div class="item-estoque">
+                    <div>Ingrediente 3</div>
+                    <div>Categoria 1</div>
+                    <div>4kg</div>
+                    <div>3,5Kg</div>
+                    <div class="status-atencao">Atenção</div>
+                </div>
+                <div class="item-estoque">
+                    <div>Ingrediente 4</div>
+                    <div>Categoria 3</div>
+                    <div>20L</div>
+                    <div>12L</div>
+                    <div class="status-normal">Normal</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

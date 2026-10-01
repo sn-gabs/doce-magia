@@ -1,0 +1,333 @@
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.cabecalho{
+    margin-bottom: 2rem;
+}
+
+.cabecalho h2{
+    color:#2a2522;
+    margin-bottom:.5rem;
+}
+
+.cabecalho p{
+    color:#867d79;
+}
+
+/* ===========================
+        Cards
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:1.5rem;
+
+    margin-bottom:2rem;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:1.8rem;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.card i{
+
+    font-size:2rem;
+
+    color:#865059;
+
+    margin-bottom:1rem;
+
+}
+
+.card h3{
+
+    margin-bottom:.8rem;
+
+    color:#2a2522;
+
+}
+
+.card h2{
+
+    color:#865059;
+
+    font-size:2rem;
+
+}
+
+/* ===========================
+      Registrar Venda
+=========================== */
+
+.movimentacoes{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:2rem;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+    margin-bottom:2rem;
+
+}
+
+.movimentacoes h2{
+
+    margin-bottom:1.5rem;
+
+    color:#2a2522;
+
+}
+
+.linha{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:1.5rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+.grupo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.grupo label{
+
+    margin-bottom:.5rem;
+
+    font-family:"Inter", sans-serif;
+
+    color:#2a2522;
+
+    font-weight:600;
+
+}
+
+.grupo input,
+.grupo select{
+
+    padding:.9rem;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-family:"Inter", sans-serif;
+
+    font-size:.95rem;
+
+    transition:.3s;
+
+}
+
+.grupo input:focus,
+.grupo select:focus{
+
+    border-color:#865059;
+
+}
+
+.grupo button{
+
+    margin-top:auto;
+
+    padding:1rem;
+
+    background:#865059;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    transition:.3s;
+
+    font-family:"Inter", sans-serif;
+
+    font-size:1rem;
+
+}
+
+.grupo button:hover{
+
+    background:#73444b;
+
+}
+
+.grupo button i{
+
+    color:white;
+
+}
+
+/* ===========================
+      Histórico
+=========================== */
+
+.historico{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:2rem;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.historico h2{
+
+    margin-bottom:1.5rem;
+
+    color:#2a2522;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#865059;
+
+}
+
+thead th{
+
+    color:white;
+
+    padding:1rem;
+
+    text-align:left;
+
+    font-weight:500;
+
+}
+
+tbody td{
+
+    padding:1rem;
+
+    border-bottom:1px solid #ececec;
+
+    font-family:"Inter", sans-serif;
+
+    color:#555;
+
+}
+
+tbody tr:hover{
+
+    background:#faf7f7;
+
+}
+
+/* ===========================
+      Responsividade
+=========================== */
+
+@media(max-width:768px){
+
+    .linha{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .movimentacoes,
+    .historico{
+
+        padding:1.5rem;
+
+    }
+
+    table{
+
+        min-width:600px;
+
+    }
+
+    .historico{
+
+        overflow-x:auto;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .cabecalho h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

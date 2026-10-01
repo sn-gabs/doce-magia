@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Magia — Gestão de Estoque</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/gerente/g_paginas.css">
+    <link rel="stylesheet" href="../../css/gerente/g_estoque.css">
+</head>
+<body>
+    <header class="barra_navegacao">
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>Doce Magia</h1>
+            <span class="divisor"></span>
+            <div class="usuario_logado">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Gerente</span>
+            </div>
+        </div>
+
+        <div class="sair">
+            <span class="modulo_atual">MÓDULO ADMINISTRATIVO</span>
+            <a href="../../index.html" class="botao_sair">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </header>
+
+    <nav class="submenu_atendente">
+        <ul>
+            <li><a href="g_dashboard.html"><i class="fa-solid fa-grip"></i> Dashboard</a></li>
+            <li><a href="g_estoque.html" class="selecionado"><i class="fa-solid fa-cube"></i> Estoque</a></li>
+            <li><a href="g_produtos.html"><i class="fa-solid fa-cake-candles"></i> Produtos</a></li>
+            <li><a href="g_relatorios.html"><i class="fa-solid fa-chart-simple"></i> Relatórios</a></li>
+            <li><a href="g_alertas.html"><i class="fa-solid fa-bell"></i> Alertas</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <div class="cabecalho_acoes">
+            <div class="cabecalho_pagina">
+                <h1>Gestão de Estoque</h1>
+                <p>Controlo de ingredientes e reposições</p>
+            </div>
+            <a class="btn_primario" href="g_estoque_formulario.html">
+                <i class="fa-solid fa-plus"></i> Adicionar Ingrediente
+            </a>
+        </div>
+
+        <div class="barra_filtros">
+            <input type="search" class="input_pesquisa" id="pesquisaEstoque" placeholder="Pesquisar ingrediente..." aria-label="Pesquisar ingrediente">
+            <select class="select_filtro" id="filtroCategoria" aria-label="Filtrar por categoria">
+                <option value="">Todas as categorias</option>
+            </select>
+        </div>
+
+        <div id="mensagemEstoque" class="mensagem_estoque" aria-live="polite"></div>
+        <p id="estadoEstoque" class="estado_estoque" aria-live="polite" hidden></p>
+
+        <div class="tabela_container">
+            <table class="tabela_padrao" id="tabelaEstoque" hidden>
+                <thead>
+                    <tr>
+                        <th>Ingrediente</th>
+                        <th>Categoria</th>
+                        <th>Disponível</th>
+                        <th>Mínimo</th>
+                        <th>Estado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoEstoque"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="modalIngrediente" class="modal_estoque" aria-hidden="true">
+        <section class="modal_estoque_conteudo" role="dialog" aria-modal="true" aria-labelledby="tituloModalIngrediente">
+            <div class="modal_estoque_cabecalho">
+                <h2 id="tituloModalIngrediente">Editar ingrediente</h2>
+                <button type="button" class="fechar_modal_estoque" data-fechar-modal aria-label="Fechar">&times;</button>
+            </div>
+            <form id="formEdicaoIngrediente">
+                <input type="hidden" id="editId">
+                <div class="campo_estoque">
+                    <label for="editNome">Ingrediente *</label>
+                    <input type="text" id="editNome" maxlength="100" required>
+                </div>
+                <div class="campo_estoque">
+                    <label for="editCategoria">Categoria *</label>
+                    <select id="editCategoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Açúcares">Açúcares</option>
+                        <option value="Chocolates">Chocolates</option>
+                        <option value="Laticínios">Laticínios</option>
+                        <option value="Farinhas">Farinhas</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="campos_estoque_linha">
+                    <div class="campo_estoque">
+                        <label for="editQuantidade">Quantidade disponível *</label>
+                        <input type="number" id="editQuantidade" min="0" step="0.01" required>
+                    </div>
+                    <div class="campo_estoque">
+                        <label for="editUnidade">Unidade *</label>
+                        <select id="editUnidade" required>
+                            <option value="kg">Quilogramas (kg)</option>
+                            <option value="g">Gramas (g)</option>
+                            <option value="l">Litros (L)</option>
+                            <option value="ml">Mililitros (ml)</option>
+                            <option value="un">Unidades (un)</option>
+                        </select>
+                    </div>
+                    <div class="campo_estoque">
+                        <label for="editMinimo">Estoque mínimo *</label>
+                        <input type="number" id="editMinimo" min="0" step="0.01" required>
+                    </div>
+                </div>
+                <div class="acoes_formulario_estoque">
+                    <button type="button" class="btn_cancelar_estoque" data-fechar-modal>Cancelar</button>
+                    <button type="submit" class="btn_primario" id="btnSalvarEdicaoEstoque">Salvar alterações</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div id="modalReposicao" class="modal_estoque" aria-hidden="true">
+        <section class="modal_estoque_conteudo modal_reposicao_conteudo" role="dialog" aria-modal="true" aria-labelledby="tituloModalReposicao">
+            <div class="modal_estoque_cabecalho">
+                <h2 id="tituloModalReposicao">Repor estoque</h2>
+                <button type="button" class="fechar_modal_estoque" data-fechar-reposicao aria-label="Fechar">&times;</button>
+            </div>
+            <p id="nomeIngredienteReposicao"></p>
+            <form id="formReposicao">
+                <input type="hidden" id="idIngredienteReposicao">
+                <div class="campo_estoque">
+                    <label for="quantidadeReposicao">Quantidade a adicionar *</label>
+                    <input type="number" id="quantidadeReposicao" min="0.01" step="0.01" required>
+                </div>
+                <div class="acoes_formulario_estoque">
+                    <button type="button" class="btn_cancelar_estoque" data-fechar-reposicao>Cancelar</button>
+                    <button type="submit" class="btn_primario">Confirmar reposição</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="rodape">
+        <p>Doce Magia — Sistema de Gestão</p>
+        <p>© 2026 Todos os direitos reservados</p>
+    </footer>
+    <script src="../../scripts/atendente-utils.js"></script>
+    <script src="../../scripts/gerente_estoque.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #fff7f4 0%, #f9e7ee 100%);
+    color: #4b2c2c;
+}
+
+.selecao_modulos {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f2a7bf, #d86e96);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(160, 82, 110, 0.2);
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    color: #4b2c2c;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.12em;
+    font-weight: 800;
+}
+
+.cabecalho p {
+    margin-top: 12px;
+    color: #7b5151;
+    font-size: 1rem;
+}
+
+.modulos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card_modulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 150px;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(170, 120, 134, 0.15);
+    border-left: 8px solid #d98aaa;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #4b2c2c;
+    box-shadow: 0 8px 18px rgba(104, 62, 71, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card_modulo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(104, 62, 71, 0.12);
+}
+
+.icone_modulo {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffe5ee, #f8d7c0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a64d75;
+    font-size: 1.8rem;
+}
+
+.card_modulo h2 {
+    margin: 0 0 8px;
+    font-size: 1.7rem;
+    color: #4b2c2c;
+}
+
+.card_modulo p {
+    margin: 0;
+    line-height: 1.5;
+    color: #6e4b4d;
+    font-size: 1rem;
+}
+
+.acessar {
+    margin-left: auto;
+    background: linear-gradient(135deg, #ef9ab7, #d86e96);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.atendente {
+    border-left-color: #d78eb1;
+}
+
+.produtor {
+    border-left-color: #c48f6c;
+}
+
+.gerente {
+    border-left-color: #a97ad1;
+}
+
+.cliente {
+    border-left-color: #de8f52;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 18px 12px 26px;
+    color: #7a4d4d;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .card_modulo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 16px;
+    }
+
+    .icone_modulo {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .acessar {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,52 @@
+
+i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#main_atendente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo_h2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0 0 0 4%;
+}
+
+
+#funcionalidades_atendente{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#outros_modulos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.resumo-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 0rem;
+    margin-bottom: 0rem;
+}

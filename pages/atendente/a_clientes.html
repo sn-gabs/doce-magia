@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clientes - Doce Magia</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/atendente/a_clientes.css">
+
+    <script src="https://kit.fontawesome.com/9fcac6d441.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="barra_navegacao">
+
+        <div class="titulo_principal">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h1>DOCE MAGIA</h1>
+        </div>
+
+        <div class="sair">
+            <a href="../../index.html">Sair</a>
+        </div>
+
+    </nav>
+
+    <nav class="submenu_atendente">
+
+        <ul>
+
+            <li>
+                <a href="a_dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a class="selecionado" href="a_clientes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Clientes
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="cabecalho">
+
+        <h2>Clientes</h2>
+
+        <p>
+            Consulte e cadastre clientes da Doceria Doce Magia.
+        </p>
+
+    </section>
+
+    <section class="acoes">
+
+        <input
+            type="text"
+            id="campoPesquisa"
+            placeholder="Pesquisar por nome ou CPF">
+
+        <a id="novoCliente" class="botao_novo_cliente" href="a_cliente_cadastro.html">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Novo Cliente
+
+        </a>
+
+    </section>
+
+    <div id="mensagem" class="mensagem" aria-live="polite"></div>
+
+    <section class="tabela">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaClientes"></tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<!-- Modal -->
+
+<div id="modalCliente" class="modal" aria-hidden="true">
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="tituloModalCliente">
+
+        <button type="button" class="fechar" data-fechar-modal aria-label="Fechar edição">&times;</button>
+
+        <h2 id="tituloModalCliente">Editar Cliente</h2>
+
+        <form id="formCliente">
+
+            <label>Nome</label>
+            <input type="text" id="nome" required>
+
+            <label>CPF</label>
+            <input type="text" id="cpf" required>
+
+            <label>Telefone</label>
+            <input type="text" id="telefone" required>
+
+            <label>E-mail</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Salvar Cliente
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer class="rodape">
+
+    <p>© 2026 Doce Magia</p>
+    <p>Sistema da Doceria</p>
+    <p>Site criado para fins pedagógicos</p>
+
+</footer>
+
+<script src="../../scripts/atendente-utils.js"></script>
+<script src="../../scripts/a_clientes.js"></script>
+
+</body>
+</html>
