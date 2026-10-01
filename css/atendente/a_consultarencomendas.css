@@ -1,175 +1,200 @@
-.container{
-    width: 90%;
-    margin: 2rem auto;
+.container {
+    width: min(1100px, 90%);
+    margin: 2rem auto 5rem;
 }
 
-.cabecalho{
+.cabecalho {
     margin-bottom: 2rem;
 }
 
-.cabecalho h2{
-    color: #2a2522;
-    margin-bottom: .5rem;
+.cabecalho h2 {
+    margin: 0 0 0.5rem;
+    color: var(--marrom, #4b2c2c);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-weight: 800;
 }
 
-.cabecalho p{
-    color: #867d79;
+.cabecalho p {
+    margin: 0;
+    color: #775a5d;
 }
 
-.pesquisa{
+.pesquisa {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.pesquisa input{
+.pesquisa input {
     flex: 1;
-    padding: .9rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    min-height: 48px;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--linha, rgba(122, 87, 92, 0.14));
+    border-radius: 12px;
     outline: none;
-    font-family: "Inter", sans-serif;
-    font-size: .95rem;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--texto, #5e3d40);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 18px rgba(75, 44, 44, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pesquisa input:focus{
-    border: 1px solid #865059;
+.pesquisa input:focus {
+    border-color: rgba(216, 110, 150, 0.55);
+    box-shadow: 0 0 0 4px rgba(242, 167, 191, 0.14);
 }
 
-.pesquisa button{
+.pesquisa button {
     display: flex;
     align-items: center;
-    gap: .6rem;
-    background-color: #865059;
-    color: white;
-    padding: .9rem 1.5rem;
-    border-radius: 10px;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 48px;
+    border: 0;
+    background: var(--rosa-escuro, #d86e96);
+    color: var(--branco, #ffffff);
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
     cursor: pointer;
-    transition: .3s;
-    font-family: "Inter", sans-serif;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font: inherit;
+    font-weight: 700;
 }
 
-.pesquisa button:hover{
-    background-color: #73444b;
+.pesquisa button:hover {
+    background: #c65e87;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(216, 110, 150, 0.2);
 }
 
-.pesquisa button i{
-    color: white;
+.pesquisa button i {
+    color: var(--branco, #ffffff);
 }
 
-.tabela{
-    background: white;
-    border-radius: 15px;
+.tabela {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--linha, rgba(122, 87, 92, 0.14));
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    box-shadow: 0 10px 22px var(--sombra, rgba(88, 52, 59, 0.1));
 }
 
-table{
-    width:100%;
+table {
+    width: 100%;
     border-collapse: collapse;
 }
 
-thead{
-    background-color:#865059;
+thead {
+    background: linear-gradient(135deg, #fff4f8 0%, #fbe7ef 100%);
 }
 
-thead th{
-    color:white;
-    padding:1rem;
-    text-align:left;
-    font-weight:500;
+thead th {
+    color: var(--rosa-escuro, #d86e96);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(216, 110, 150, 0.2);
 }
 
-tbody td{
-    padding:1rem;
-    border-bottom:1px solid #eee;
-    font-family:"Inter", sans-serif;
-    color:#555;
+tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--linha, rgba(122, 87, 92, 0.14));
+    color: var(--texto, #5e3d40);
 }
 
-tbody tr:hover{
-    background:#faf7f7;
+tbody tr:last-child td {
+    border-bottom: 0;
 }
 
-.status{
-    padding:.45rem .9rem;
-    border-radius:20px;
-    font-size:.85rem;
-    font-weight:600;
-    display:inline-block;
+tbody tr:hover {
+    background: #fff7f9;
 }
 
-.entregue{
-    background:#dff5e2;
-    color:#1d7a34;
+.status {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    border: 1px solid transparent;
 }
 
-.producao{
-    background:#fff4d6;
-    color:#9a6b00;
+.entregue {
+    background: #e4f5e7;
+    color: var(--sucesso, #2e7d32);
+    border-color: #c6e7ca;
 }
 
-.pendente{
-    background:#fde3e3;
-    color:#b3261e;
+.producao {
+    background: #fff2df;
+    color: var(--atencao, #ef6c00);
+    border-color: #f7d9ab;
 }
 
-.visualizar{
-    display:flex;
-    align-items:center;
-    gap:.5rem;
-    background:#865059;
-    color:white;
-    padding:.6rem 1rem;
-    border-radius:8px;
-    cursor:pointer;
-    transition:.3s;
-    font-family:"Inter", sans-serif;
+.pendente {
+    background: #fde9ec;
+    color: var(--alerta, #c62828);
+    border-color: #f2c6cd;
 }
 
-.visualizar:hover{
-    background:#73444b;
+.visualizar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--rosa-escuro, #d86e96);
+    color: var(--branco, #ffffff);
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font: inherit;
+    font-weight: 700;
 }
 
-.visualizar i{
-    color:white;
+.visualizar:hover {
+    background: #c65e87;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 15px rgba(216, 110, 150, 0.18);
 }
 
-@media(max-width:900px){
+.visualizar i {
+    color: var(--branco, #ffffff);
+}
 
-    .pesquisa{
-        flex-direction:column;
+@media (max-width: 900px) {
+    .pesquisa {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .pesquisa button{
-        width:100%;
-        justify-content:center;
+    .pesquisa button {
+        width: 100%;
     }
 
-    .tabela{
-        overflow-x:auto;
+    .tabela {
+        overflow-x: auto;
     }
 
-    table{
-        min-width:750px;
+    table {
+        min-width: 750px;
     }
-
 }
 
-@media(max-width:600px){
-
-    .container{
-        width:95%;
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
     }
 
-    .cabecalho h2{
-        font-size:1.6rem;
+    .cabecalho h2 {
+        font-size: 1.6rem;
     }
 
-    .pesquisa input{
-        font-size:.9rem;
+    .pesquisa input {
+        font-size: 0.9rem;
     }
-
 }

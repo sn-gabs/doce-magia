@@ -1,251 +1,191 @@
-.container{
-    width: 90%;
-    margin: 2rem auto;
+.container {
+    width: min(1100px, 90%);
+    margin: 2rem auto 5rem;
 }
 
-.cabecalho{
+.cabecalho {
     margin-bottom: 2rem;
 }
 
-.cabecalho h2{
-    color:#2a2522;
-    margin-bottom:.5rem;
+.cabecalho h2 {
+    margin: 0 0 0.5rem;
+    color: var(--marrom, #4b2c2c);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-weight: 800;
 }
 
-.cabecalho p{
-    color:#867d79;
+.cabecalho p {
+    margin: 0;
+    color: #775a5d;
 }
 
 /* ===========================
         Pesquisa
 =========================== */
 
-.pesquisa{
-    margin-bottom:2rem;
+.pesquisa {
+    margin-bottom: 1.5rem;
 }
 
-.pesquisa input{
-    width:100%;
-    padding:.9rem 1rem;
-    border:1px solid #ddd;
-    border-radius:10px;
-    outline:none;
-    font-family:"Inter", sans-serif;
-    font-size:.95rem;
+.pesquisa input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--linha, rgba(122, 87, 92, 0.14));
+    border-radius: 12px;
+    outline: none;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--texto, #5e3d40);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 18px rgba(75, 44, 44, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pesquisa input:focus{
-    border-color:#865059;
+.pesquisa input:focus {
+    border-color: rgba(216, 110, 150, 0.55);
+    box-shadow: 0 0 0 4px rgba(242, 167, 191, 0.14);
 }
 
 /* ===========================
         Grid Produtos
 =========================== */
 
-.grid-produtos{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-
-    gap:1.5rem;
-
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.2rem;
 }
 
 /* ===========================
         Card Produto
 =========================== */
 
-.produto-card{
-
-    background:white;
-
-    border-radius:15px;
-
-    padding:1.5rem;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.05);
-
-    transition:.3s;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
+.produto-card {
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--linha, rgba(122, 87, 92, 0.14));
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 22px var(--sombra, rgba(88, 52, 59, 0.1));
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.produto-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 26px rgba(88, 52, 59, 0.13);
+    border-color: rgba(216, 110, 150, 0.28);
 }
 
-.icone-produto{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-    background:#865059;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:1rem;
-
+.icone-produto {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rosa-escuro, #d86e96) 0%, var(--rosa, #f2a7bf) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 16px rgba(216, 110, 150, 0.18);
 }
 
-.icone-produto i{
-
-    color:white;
-
-    font-size:1.8rem;
-
+.icone-produto i {
+    color: var(--branco, #ffffff);
+    font-size: 1.8rem;
 }
 
-.produto-card h3{
-
-    margin-bottom:.4rem;
-
-    color:#2a2522;
-
+.produto-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--marrom, #4b2c2c);
 }
 
-.categoria{
-
-    color:#867d79;
-
-    margin-bottom:1rem;
-
+.categoria {
+    color: #775a5d;
+    margin-bottom: 1rem;
 }
 
-.preco{
-
-    font-size:1.3rem;
-
-    font-weight:700;
-
-    color:#865059;
-
-    margin-bottom:1rem;
-
+.preco {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--rosa-escuro, #d86e96);
+    margin-bottom: 1rem;
 }
 
 /* ===========================
           Status
 =========================== */
 
-.status{
-
-    padding:.45rem 1rem;
-
-    border-radius:20px;
-
-    font-size:.85rem;
-
-    font-weight:600;
-
-    margin-bottom:1.3rem;
-
+.status {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    border: 1px solid transparent;
 }
 
-.disponivel{
-
-    background:#dff5e2;
-
-    color:#1f7a35;
-
+.disponivel {
+    background: #e4f5e7;
+    color: var(--sucesso, #2e7d32);
+    border-color: #c6e7ca;
 }
 
-.indisponivel{
-
-    background:#fde3e3;
-
-    color:#b3261e;
-
+.indisponivel {
+    background: #fde9ec;
+    color: var(--alerta, #c62828);
+    border-color: #f2c6cd;
 }
 
 /* ===========================
         Botão
 =========================== */
 
-.visualizar{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:.6rem;
-
-    background:#865059;
-
-    color:white;
-
-    padding:.9rem;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    font-family:"Inter", sans-serif;
-
+.visualizar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--rosa-escuro, #d86e96);
+    color: var(--branco, #ffffff);
+    padding: 0.9rem;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font: inherit;
+    font-weight: 700;
 }
 
-.visualizar:hover{
-
-    background:#73444b;
-
+.visualizar:hover {
+    background: #c65e87;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(216, 110, 150, 0.2);
 }
 
-.visualizar i{
-
-    color:white;
-
+.visualizar i {
+    color: var(--branco, #ffffff);
 }
 
 /* ===========================
         Responsividade
 =========================== */
 
-@media(max-width:900px){
-
-    .grid-produtos{
-
-        grid-template-columns:repeat(2,1fr);
-
+@media (max-width: 900px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
-@media(max-width:650px){
-
-    .container{
-
-        width:95%;
-
+@media (max-width: 650px) {
+    .container {
+        width: 95%;
     }
 
-    .grid-produtos{
-
-        grid-template-columns:1fr;
-
+    .grid-produtos {
+        grid-template-columns: 1fr;
     }
-
 }

@@ -1,52 +1,86 @@
-
-i{
+i {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--branco, #ffffff);
 }
 
-#main_atendente{
+#main_atendente {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.titulo_h2{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    justify-content: flex-start;
     width: 100%;
-    padding: 0 0 0 4%;
-}
-
-
-#funcionalidades_atendente{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-#outros_modulos{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    gap: 1.5rem;
+    margin-top: 2rem;
     margin-bottom: 5rem;
 }
 
-.resumo-dashboard{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.titulo_h2 {
+    width: min(1100px, 90%);
+    margin: 0 0 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+.titulo_h2 h2 {
+    margin: 0;
+    color: var(--marrom, #4b2c2c);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 800;
+}
+
+#funcionalidades_atendente,
+#outros_modulos,
+.resumo-dashboard {
+    width: min(1100px, 90%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    align-items: stretch;
     justify-content: center;
-    width: 90%;
-    gap: 0rem;
-    margin-bottom: 0rem;
+}
+
+#funcionalidades_atendente {
+    margin-bottom: 1.5rem;
+}
+
+#outros_modulos {
+    margin-bottom: 2rem;
+}
+
+.resumo-dashboard {
+    margin-bottom: 0;
+}
+
+#funcionalidades_atendente > *,
+#outros_modulos > *,
+.resumo-dashboard > * {
+    min-width: 0;
+}
+
+@media (max-width: 760px) {
+    .titulo_h2,
+    #funcionalidades_atendente,
+    #outros_modulos,
+    .resumo-dashboard {
+        width: 90%;
+    }
+
+    .titulo_h2 {
+        text-align: center;
+    }
+
+    #funcionalidades_atendente,
+    #outros_modulos,
+    .resumo-dashboard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    #funcionalidades_atendente,
+    #outros_modulos,
+    .resumo-dashboard {
+        grid-template-columns: 1fr;
+    }
 }

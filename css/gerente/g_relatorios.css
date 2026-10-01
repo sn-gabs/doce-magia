@@ -1,38 +1,50 @@
-
 .seletor_periodo {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
 
 .grid_relatorios_kpi {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .card_kpi {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(170, 120, 134, 0.15);
+    border-left: 6px solid #d98aaa;
+    border-radius: 18px;
     padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 8px 18px rgba(104, 62, 71, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card_kpi:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(104, 62, 71, 0.12);
 }
 
 .card_kpi_topo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-family: "Inter", sans-serif;
-    font-size: 0.85rem;
-    color: #867d79;
-    margin-bottom: 0.8rem;
+    gap: 0.6rem;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7b5151;
+    margin-bottom: 0.9rem;
+}
+
+.card_kpi_topo i {
+    color: #d86e96;
 }
 
 .card_kpi_valor {
-    font-family: "Inter", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #865059;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4b2c2c;
+    line-height: 1;
 }
 
 .grid_graficos {
@@ -42,28 +54,53 @@
 }
 
 .placeholder_grafico {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(170, 120, 134, 0.15);
+    border-radius: 18px;
     padding: 1.5rem;
-    height: 350px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    box-shadow: 0 8px 18px rgba(104, 62, 71, 0.08);
 }
 
 .titulo_grafico {
-    font-family: "Playfair Display", serif;
-    font-size: 1.1rem;
-    color: #867d79;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4b2c2c;
     text-transform: uppercase;
-    margin-bottom: auto;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
 }
 
 .centro_grafico {
     margin: auto;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
-    color: #b5aba6;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #a06c79;
+}
+
+@media (max-width: 900px) {
+    .grid_relatorios_kpi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid_graficos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid_relatorios_kpi {
+        grid-template-columns: 1fr;
+    }
+
+    .card_kpi {
+        padding: 1.2rem;
+    }
+
+    .card_kpi_valor {
+        font-size: 1.7rem;
+    }
 }
