@@ -31,10 +31,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, var(--marrom) 0%, #6b3b3f 100%);
-    padding: 1rem 2rem;
+    background-color: #fdfcfc;
+    padding: 1rem 8%;
+    border-bottom: 1px solid #ddd;
     box-sizing: border-box;
-    box-shadow: 0 10px 24px rgba(75, 44, 44, 0.12);
 }
 
 .titulo_principal {
@@ -44,38 +44,29 @@ body {
 }
 
 .titulo_principal i {
-    font-size: 1.2rem;
-    color: var(--branco);
-    background: rgba(255, 255, 255, 0.12);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    background-color: #865059;
+    color: var(--branco);
+    border-radius: 30px;
+    padding: 5% 8%;
 }
 
 .titulo_principal h1 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--branco);
     margin: 0;
-    letter-spacing: 0.06em;
-    display: flex;
-    align-items: center;
+    color: #2a2522;
+    white-space: nowrap;
 }
 
 .sair a {
-    color: var(--branco);
+    color: #867d79;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: opacity 0.2s ease;
+    transition: color 0.3s;
 }
 
 .sair a:hover {
-    opacity: 0.8;
+    color: #865059;
 }
 
 i {

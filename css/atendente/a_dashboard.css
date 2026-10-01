@@ -1,86 +1,278 @@
-i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--branco, #ffffff);
+#main_atendente {
+    width: min(1100px, 90%);
+    margin: 2rem auto 4rem;
 }
 
-#main_atendente {
+.barra_navegacao {
+    width: min(1100px, 90%);
+    min-height: 72px;
+    margin: 1.25rem auto 0;
+    padding: 1rem 1.5rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid var(--linha);
+    border-radius: 20px;
+    box-shadow: 0 10px 22px var(--sombra);
+}
+
+.titulo_principal {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.titulo_principal i {
+    color: var(--rosa-escuro);
+    font-size: 1.7rem;
+}
+
+.titulo_principal h1 {
+    margin: 0;
+    color: var(--marrom);
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.sair a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    background: var(--branco);
+    color: #7a5d60;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.sair a:hover {
+    color: var(--rosa-escuro);
+    border-color: rgba(216, 110, 150, 0.4);
+    background: #fff4f8;
+}
+
+.resumo-dashboard {
+    margin-bottom: 1.5rem;
+}
+
+#funcionalidades_atendente,
+#outros_modulos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .titulo_h2 {
-    width: min(1100px, 90%);
-    margin: 0 0 2rem;
-    padding: 0;
-    text-align: left;
+    grid-column: 1 / -1;
+    padding: 0.2rem 0 0.3rem;
 }
 
 .titulo_h2 h2 {
     margin: 0;
-    color: var(--marrom, #4b2c2c);
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 800;
+    color: var(--marrom);
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-#funcionalidades_atendente,
-#outros_modulos,
-.resumo-dashboard {
-    width: min(1100px, 90%);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.2rem;
-    align-items: stretch;
+.titulo_h2 p {
+    margin: 0.4rem 0 0;
+    color: #775a5d;
+}
+
+.botao {
+    min-height: 190px;
+}
+
+.botao a {
+    height: 100%;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid var(--linha);
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(75, 44, 44, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.botao a:hover {
+    transform: translateY(-5px);
+    border-color: rgba(216, 110, 150, 0.3);
+    box-shadow: 0 12px 24px var(--sombra);
+}
+
+.icone {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 30%;
+    background: linear-gradient(135deg, #fff0f5 0%, #f9e1eb 100%);
+    color: var(--rosa-escuro);
 }
 
-#funcionalidades_atendente {
-    margin-bottom: 1.5rem;
+.icone i {
+    color: inherit;
+    font-size: 1.2rem;
 }
 
-#outros_modulos {
-    margin-bottom: 2rem;
+.botao h3 {
+    margin: 0 0 0.45rem;
+    color: var(--marrom);
+    font-size: 1.05rem;
 }
 
-.resumo-dashboard {
-    margin-bottom: 0;
+.botao p {
+    margin: 0;
+    color: #775a5d;
+    font-size: 0.88rem;
+    line-height: 1.5;
 }
 
-#funcionalidades_atendente > *,
-#outros_modulos > *,
-.resumo-dashboard > * {
-    min-width: 0;
-}
-
-@media (max-width: 760px) {
-    .titulo_h2,
+@media (max-width: 850px) {
     #funcionalidades_atendente,
-    #outros_modulos,
-    .resumo-dashboard {
-        width: 90%;
-    }
-
-    .titulo_h2 {
-        text-align: center;
-    }
-
-    #funcionalidades_atendente,
-    #outros_modulos,
-    .resumo-dashboard {
+    #outros_modulos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+    .barra_navegacao {
+        width: 95%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #main_atendente {
+        width: 95%;
+    }
+
     #funcionalidades_atendente,
-    #outros_modulos,
-    .resumo-dashboard {
+    #outros_modulos {
         grid-template-columns: 1fr;
+    }
+}
+
+body > header .barra_navegacao {
+    width: min(1100px, 90%);
+    margin: 1.25rem auto 0;
+    padding: 0.8rem 1.4rem;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid var(--linha);
+    border-radius: 18px;
+    box-shadow: 0 10px 22px var(--sombra);
+}
+
+body > header .titulo_principal {
+    gap: 0.75rem;
+    background: transparent;
+}
+
+body > header .titulo_principal > i {
+    padding: 0;
+    background: transparent;
+    color: var(--rosa-escuro);
+    font-size: 1.7rem;
+}
+
+body > header .titulo_principal h1 {
+    color: var(--marrom);
+}
+
+body > header .sair a {
+    width: auto;
+    height: auto;
+    color: #7a5d60;
+}
+
+#resumoDashboard > .resumo-dashboard {
+    width: 100% !important;
+    margin: 0 0 2rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.2rem !important;
+}
+
+#resumoDashboard > .resumo-dashboard > div {
+    min-height: 130px !important;
+    padding: 1.4rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.84) !important;
+    border: 1px solid var(--linha);
+    border-radius: 18px !important;
+    box-shadow: 0 8px 18px var(--sombra) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#resumoDashboard > .resumo-dashboard > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px var(--sombra) !important;
+}
+
+#resumoDashboard > .resumo-dashboard > div h3 {
+    margin: 0 0 0.35rem !important;
+    color: var(--marrom) !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+#resumoDashboard > .resumo-dashboard > div p {
+    margin: 0 !important;
+    color: var(--rosa-escuro) !important;
+    font-size: 1.7rem !important;
+    font-weight: 800 !important;
+}
+
+#funcionalidades_atendente > .botao,
+#outros_modulos > .botao {
+    width: auto;
+    height: auto;
+    min-height: 180px;
+    padding: 0;
+    border: 0;
+}
+
+#funcionalidades_atendente > .botao > a,
+#outros_modulos > .botao > a {
+    min-height: 180px;
+    height: 100%;
+}
+
+#funcionalidades_atendente > .botao .icone,
+#outros_modulos > .botao .icone {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border-radius: 50%;
+    background: #fff0f5;
+}
+
+#funcionalidades_atendente > .botao h3,
+#outros_modulos > .botao h3 {
+    margin: 0 0 0.45rem;
+}
+
+@media (max-width: 850px) {
+    #resumoDashboard > .resumo-dashboard {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #resumoDashboard > .resumo-dashboard {
+        grid-template-columns: 1fr !important;
     }
 }
