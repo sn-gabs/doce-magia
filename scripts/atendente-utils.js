@@ -2,6 +2,7 @@
     const STORAGE_KEYS = {
         clientes: "clientes",
         atendentes: "atendentes",
+        produtores: "produtores",
         ingredientes: "ingredientes",
         produtos: "produtos",
         encomendas: "encomendas",
@@ -42,6 +43,14 @@
 
     function saveAtendentes(atendentes) {
         return setStorageItem(STORAGE_KEYS.atendentes, atendentes);
+    }
+
+    function getProdutores() {
+        return getStorageItem(STORAGE_KEYS.produtores, []);
+    }
+
+    function saveProdutores(produtores) {
+        return setStorageItem(STORAGE_KEYS.produtores, produtores);
     }
 
     function getIngredientes() {
@@ -137,6 +146,8 @@
         saveClientes,
         getAtendentes,
         saveAtendentes,
+        getProdutores,
+        saveProdutores,
         getIngredientes,
         saveIngredientes,
         getProdutos,

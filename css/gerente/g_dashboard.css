@@ -66,6 +66,13 @@
     gap: 1rem;
 }
 
+.acoes_cadastro_gerente{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.65rem;
+}
+
 .acao_cadastro_atendente{
     display: inline-flex;
     align-items: center;
@@ -236,6 +243,10 @@
     .cabecalho_dashboard{
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .acoes_cadastro_gerente{
+        justify-content: flex-start;
     }
 
     .grid_estatisticas,
